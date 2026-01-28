@@ -4,7 +4,7 @@
 [![MkDocs Material](https://img.shields.io/badge/MkDocs-Material-blue)](https://squidfunk.github.io/mkdocs-material/)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
-Bilingual cybersecurity and development documentation site built with MkDocs Material. Available in English and Español.
+Cybersecurity and development documentation site built with MkDocs Material.
 
 ## 🌐 Live Site
 **https://godack1905.github.io/godack.github.io**
@@ -13,14 +13,9 @@ Bilingual cybersecurity and development documentation site built with MkDocs Mat
 ```
 .
 ├── docs/ # Documentation source files
-│ ├── en/ # English documentation
-│ │ ├── index.md # English homepage
-│ │ ├── writeups/ # Cybersecurity writeups (EN)
-│ │ └── notes/ # Technical notes (EN)
-│ ├── es/ # Spanish documentation
-│ │ ├── index.md # Spanish homepage
-│ │ ├── writeups/ # Cybersecurity writeups (ES)
-│ │ └── apuntes/ # Technical notes (ES)
+│ ├── index.md # Homepage
+│ ├── writeups/ # Cybersecurity writeups
+│ ├── notes/ # Technical notes
 │ └── images/ # Images and assets
 ├── mkdocs.yml # MkDocs configuration
 ├── .github/workflows/ # GitHub Actions workflows

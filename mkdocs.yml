@@ -27,23 +27,12 @@ extra:
         link: https://www.linkedin.com/in/isa%C3%ADas-vela-sotil-b436431a4/
 
 nav:
-  - English:
-      - Home: en/index.md
-      - Writeups:
-          - First Hacking: en/writeups/FirstHacking.md
-          - Injection: en/writeups/Injection.md
-          - Trust: en/writeups/Trust.md
-          - Obsession: en/writeups/Obsession.md
-      - Notes:
-          - Most common vulnerabilities: en/notes/VulnerabilityWeb.md
-          - Pentesting tools: en/notes/Tools.md
-  - Español:
-      - Inicio: es/index.md
-      - Writeups:
-          - First Hacking: es/writeups/FirstHacking.md
-          - Injection: es/writeups/Injection.md
-          - Trust: es/writeups/Trust.md
-          - Obsession: es/writeups/Obsession.md
-      - Apuntes:
-          - Vulnerabilidades web mas comunes: es/notes/VulnerabilityWeb.md
-          - Herramientas de pentesting: es/notes/Tools.md
+  - Home: index.md
+  - Writeups:
+      - First Hacking: writeups/FirstHacking.md
+      - Injection: writeups/Injection.md
+      - Trust: writeups/Trust.md
+      - Obsession: writeups/Obsession.md
+  - Notes:
+      - Most common vulnerabilities: notes/VulnerabilityWeb.md
+      - Pentesting tools: notes/Tools.md

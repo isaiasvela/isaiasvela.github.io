@@ -158,7 +158,7 @@ Hola Mario,
 
 Esta web no se puede hackear.
 ```
-![alt text](../../images/Trust-secret.png)
+![alt text](../images/Trust-secret.png)
 
 So we assume a possible username is **Mario**.  
 With no more info, the next step is brute-forcing SSH with *hydra*:

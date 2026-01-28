@@ -3,14 +3,14 @@
 Hello! I'm Isaías, a **Computer Engineering student** majoring in **Information Technologies**.  
 Here you'll find my writeups, notes, projects, and more.
 
-## ⚠️ **Disclaimer**
-
-This content is **educational** and should not be used for malicious purposes. All exercises were performed in controlled environments.
-
 ---
 
 ## Writeups
 In this section, you'll find my machine WriteUps, covering topics such as *Environment Setup*, *Reconnaissance*, *Exploitation*, *Privilege Escalation*, and *Lessons Learned*.
+
+#### ⚠️ **Disclaimer**
+
+This content is **educational** and should not be used for malicious purposes. All exercises were performed in controlled environments.
 
 - ***Dockerlabs***
     - [First Hacking](writeups/FirstHacking.md)  

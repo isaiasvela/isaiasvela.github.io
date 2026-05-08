@@ -31,7 +31,7 @@ In this section, you'll find my notes.
 ## Projects
 In this section, you will find the projects I have completed and those I am currently working on (most of which can be viewed on GitHub).
 
-- [Cybersecurity repository](https://github.com/godack1905/ciberseguridad-portfolio)
-- [Weather panel with CI/CD](https://github.com/godack1905/weather-dashboard) → [View on Github Pages](https://godack1905.github.io/weather-dashboard/)
-- [Recipes and Meal Plans application](https://github.com/godack1905/recipe-manager)
-- [Super easy ToDo application](https://github.com/godack1905/todo-app)
+- [Cybersecurity repository](https://github.com/isaiasvela/ciberseguridad-portfolio)
+- [Weather panel with CI/CD](https://github.com/isaiasvela/weather-dashboard) → [View on Github Pages](https://isaiasvela.github.io/weather-dashboard/)
+- [Recipes and Meal Plans application](https://github.com/isaiasvela/recipe-manager)
+- [Super easy ToDo application](https://github.com/isaiasvela/todo-app)

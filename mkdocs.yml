@@ -33,6 +33,7 @@ nav:
       - Injection: writeups/Injection.md
       - Trust: writeups/Trust.md
       - Obsession: writeups/Obsession.md
+      - Psycho: writeups/Psycho.md
   - Notes:
       - Most common vulnerabilities: notes/VulnerabilityWeb.md
       - Pentesting tools: notes/Tools.md

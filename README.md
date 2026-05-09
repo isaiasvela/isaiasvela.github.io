@@ -1,4 +1,4 @@
-# InfoSec & Dev Documentation Site 🚀
+# DevSecOps & Cloud Security Documentation Site 🚀
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Deployed-brightgreen)](https://isaiasvela.github.io/)
 [![MkDocs Material](https://img.shields.io/badge/MkDocs-Material-blue)](https://squidfunk.github.io/mkdocs-material/)
@@ -7,20 +7,20 @@
 Cybersecurity and development documentation site built with MkDocs Material.
 
 ## 🌐 Live Site
-**https://isaiasvela.github.io/isaiasvela.github.io**
+**https://isaiasvela.github.io**
 
 ## 📁 Project Structure
 ```
 .
-├── docs/ # Documentation source files
-│ ├── index.md # Homepage
-│ ├── writeups/ # Cybersecurity writeups
-│ ├── notes/ # Technical notes
-│ └── images/ # Images and assets
-├── mkdocs.yml # MkDocs configuration
-├── .github/workflows/ # GitHub Actions workflows
-│ └── deploy.yml # Auto-deployment to GitHub Pages
-└── README.md # This file
+├── docs/               # Documentation source files
+│ ├── index.md          # Homepage
+│ ├── writeups/         # Cybersecurity writeups
+│ ├── notes/            # Technical notes
+│ └── images/           # Images and assets
+├── mkdocs.yml          # MkDocs configuration
+├── .github/workflows/  # GitHub Actions workflows
+│ └── deploy.yml        # Auto-deployment to GitHub Pages
+└── README.md           # This file
 ```
 
 
@@ -34,7 +34,7 @@ Cybersecurity and development documentation site built with MkDocs Material.
 ```
 # Clone the repository
 git clone https://github.com/isaiasvela/isaiasvela.github.io.git
-cd godack.github.io
+cd isaiasvela.github.io
 
 # Install MkDocs with Material theme
 pip install mkdocs-material

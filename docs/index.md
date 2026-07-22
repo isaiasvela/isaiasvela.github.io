@@ -1,6 +1,9 @@
 # Welcome to Isaías' Personal Website
 
-Hello! I'm Isaías, a **Computer Engineering student** majoring in **Information Technologies**.  
+Hello! I'm Isaías, a **Computer Engineering graduate** specializing in **Information Technologies** from the **Universitat Politècnica de Catalunya (UPC)**.
+
+I'm passionate about **DevSecOps, Cloud Computing and Cybersecurity**, with a particular interest in Kubernetes security, cloud-native technologies and infrastructure automation.
+
 Here you'll find my writeups, notes, projects, and more.
 
 ---
@@ -29,9 +32,9 @@ In this section, you'll find my notes.
 ---
 
 ## Projects
-In this section, you will find the projects I have completed and those I am currently working on (most of which can be viewed on GitHub).
+In this section, you will find the projects I have completed and those I am currently working on.
 
 - [Cybersecurity repository](https://github.com/isaiasvela/ciberseguridad-portfolio)
 - [Weather panel with CI/CD](https://github.com/isaiasvela/weather-dashboard) → [View on Github Pages](https://isaiasvela.github.io/weather-dashboard/)
-- [Recipes and Meal Plans application](https://github.com/isaiasvela/recipe-manager)
-- [Super easy ToDo application](https://github.com/isaiasvela/todo-app)
+- [Bachelor's thesis](https://github.com/isaiasvela/bsc-thesis-kubernetes-security)
+- [Work Time Management Platform](https://github.com/isaiasvela/TimeTrack)

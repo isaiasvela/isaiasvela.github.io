@@ -1,39 +1,83 @@
-site_name: Isaías Vela — DevSecOps & Cloud Security
+site_name: Isaías Vela
+site_description: DevSecOps, Cloud Security and Kubernetes Security engineer portfolio.
+site_author: Isaías Vela
+site_url: https://isaiasvela.github.io/
+repo_url: https://github.com/isaiasvela
+repo_name: GitHub
+
 theme:
   name: material
-  palette:
-    - scheme: default
-      primary: indigo
-      accent: pink
-      toggle:
-        icon: material/weather-night
-        name: Cambiar a modo oscuro
-    - scheme: slate
-      primary: indigo
-      accent: pink
-      toggle:
-        icon: material/weather-sunny
-        name: Cambiar a modo claro
+  logo: images/favicon.svg
+  favicon: images/favicon.svg
   features:
     - navigation.tabs
-    - content.code.copy
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
     - search.highlight
-    - navigation.instant
-repo_url: https://github.com/isaiasvela/
-repo_name: GitHub
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue grey
+      accent: cyan
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey
+      accent: cyan
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+plugins:
+  - search
+  - tags
+  - blog:
+      blog_dir: blog
+      post_date_format: yyyy-MM-dd
+      archive: true
+      categories: true
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - toc:
+      permalink: true
+
 extra:
-    social:
-      - icon: fontawesome/brands/linkedin
-        link: https://www.linkedin.com/in/isa%C3%ADas-vela-sotil-b436431a4/
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/isaiasvela
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/isa%C3%ADas-vela-sotil-b436431a4/
 
 nav:
   - Home: index.md
-  - Writeups:
-      - First Hacking: writeups/FirstHacking.md
-      - Injection: writeups/Injection.md
-      - Trust: writeups/Trust.md
-      - Obsession: writeups/Obsession.md
-      - Psycho: writeups/Psycho.md
-  - Notes:
-      - Most common vulnerabilities: notes/VulnerabilityWeb.md
-      - Pentesting tools: notes/Tools.md
+  - About: about.md
+  - CV: cv.md
+  - Projects:
+      - Overview: projects/index.md
+      - Kubernetes Security Lab: projects/kubernetes-security-lab.md
+      - GitHub Bootstrap: projects/github-bootstrap.md
+      - TimeTrack: projects/timetrack.md
+      - Weather Dashboard: projects/weather-dashboard.md
+  - Research:
+      - Overview: research/index.md
+      - Writeups:
+          - First Hacking: research/writeups/first-hacking.md
+          - Injection: research/writeups/injection.md
+          - Trust: research/writeups/trust.md
+          - Obsession: research/writeups/obsession.md
+      - Notes:
+          - Web Vulnerabilities: research/notes/web-vulnerabilities.md
+          - Pentesting Tools: research/notes/pentesting-tools.md
+  - Skills: skills/index.md
+  - Blog: blog/index.md

@@ -5,18 +5,32 @@ description: DevSecOps and Cloud Security engineer portfolio focused on Kubernet
 
 # I build, automate and secure cloud-native infrastructure.
 
-Hi, I'm Isaías Vela, a Computer Engineer focused on DevSecOps, cloud security, Kubernetes security, and infrastructure automation.
+I am Isaías Vela, a Computer Engineer focused on DevSecOps, Kubernetes security, cloud security, and infrastructure automation. My work centers on designing secure cloud-native platforms, automating delivery pipelines, and improving the security posture of environments running in containers and Kubernetes.
 
-I design secure platforms, automate delivery pipelines, and harden cloud-native environments with a strong engineering mindset.
+## About me
+
+My focus is on building secure systems that combine software engineering, automation, and operational resilience. I work across DevSecOps, cloud security, CI/CD hardening, and Infrastructure as Code to help teams move faster without compromising security.
+
+### Areas of expertise
+
+Within DevSecOps and cloud security, I focus on the practices and controls that make secure delivery sustainable at scale: automated policy enforcement, secure pipelines, and infrastructure hardening across Kubernetes and cloud environments.
 
 <div style="display:flex; flex-wrap:wrap; gap:0.6rem; margin: 1.5rem 0;">
-  <span style="background: var(--md-primary-fg-color); color: var(--md-primary-bg-color); border-radius:999px; padding:0.45rem 0.8rem; font-size:0.8rem; font-weight:600;">Kubernetes</span>
-  <span style="background: var(--md-accent-fg-color); color: var(--md-accent-bg-color); border-radius:999px; padding:0.45rem 0.8rem; font-size:0.8rem; font-weight:600;">Docker</span>
-  <span style="background: var(--md-default-fg-color--light); color: var(--md-default-bg-color); border-radius:999px; padding:0.45rem 0.8rem; font-size:0.8rem; font-weight:600;">Cloud</span>
-  <span style="background: var(--md-primary-fg-color); color: var(--md-primary-bg-color); border-radius:999px; padding:0.45rem 0.8rem; font-size:0.8rem; font-weight:600;">CI/CD</span>
-  <span style="background: var(--md-accent-fg-color); color: var(--md-accent-bg-color); border-radius:999px; padding:0.45rem 0.8rem; font-size:0.8rem; font-weight:600;">Security</span>
+  <span style="background: var(--md-primary-fg-color); color: var(--md-primary-bg-color); border-radius:999px; padding:0.45rem 0.8rem; font-size:0.8rem; font-weight:600;">DevSecOps</span>
+  <span style="background: var(--md-accent-fg-color); color: var(--md-accent-bg-color); border-radius:999px; padding:0.45rem 0.8rem; font-size:0.8rem; font-weight:600;">Cloud Security</span>
+  <span style="background: var(--md-default-fg-color--light); color: var(--md-default-bg-color); border-radius:999px; padding:0.45rem 0.8rem; font-size:0.8rem; font-weight:600;">Kubernetes Security</span>
+  <span style="background: var(--md-primary-fg-color); color: var(--md-primary-bg-color); border-radius:999px; padding:0.45rem 0.8rem; font-size:0.8rem; font-weight:600;">Secure CI/CD</span>
+  <span style="background: var(--md-accent-fg-color); color: var(--md-accent-bg-color); border-radius:999px; padding:0.45rem 0.8rem; font-size:0.8rem; font-weight:600;">Security Automation</span>
   <span style="background: var(--md-default-fg-color--light); color: var(--md-default-bg-color); border-radius:999px; padding:0.45rem 0.8rem; font-size:0.8rem; font-weight:600;">Infrastructure as Code</span>
 </div>
+
+### Current focus
+
+I am actively exploring opportunities in:
+
+- DevSecOps Engineer
+- Cloud Security Engineer
+- Cybersecurity Engineer
 
 ## Featured Projects
 
@@ -37,18 +51,18 @@ I design secure platforms, automate delivery pipelines, and harden cloud-native 
 
 ## Latest Security Research
 
-- [First Hacking](research/writeups/first-hacking.md) — Reconnaissance, exploitation, and privilege escalation walkthrough.
-- [Injection](research/writeups/injection.md) — Practical web application attack chain and defensive lessons.
-- [Trust](research/writeups/trust.md) — Trust boundary analysis and security misconfigurations.
+- [Trust](research/writeups/trust.md) — An offensive lab with analysis of confidence limits and security configuration errors.
 - [Obsession](research/writeups/obsession.md) — An offensive security lab focused on persistence and lateral movement patterns.
+
+## Latest Posts
+
 
 ## Selected Focus Areas
 
-- Kubernetes security engineering
-- Cloud security and IAM hardening
-- CI/CD and secure delivery pipelines
-- Detection engineering and runtime monitoring
-- Automation for resilient infrastructure
+- DevSecOps and secure engineering
+- Cloud and Kubernetes security
+- Secure CI/CD and policy enforcement
+- Automation and IaC for resilient infrastructure
 
 ---
 

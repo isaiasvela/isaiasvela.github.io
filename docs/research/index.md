@@ -5,7 +5,7 @@ description: Security research, offensive lab notes, and technical writeups.
 
 # Research
 
-This section gathers the technical notes and writeups I publish while exploring security engineering, vulnerability analysis, and cloud-native security topics.
+This section gathers the technical notes, writeups & procedures I publish while exploring security engineering, vulnerability analysis, and cloud-native security topics.
 
 ## Writeups
 

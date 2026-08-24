@@ -61,7 +61,6 @@ extra:
 
 nav:
   - Home: index.md
-  - About: about.md
   - CV: cv.md
   - Projects:
       - Overview: projects/index.md

@@ -13,9 +13,8 @@ I work at the intersection of engineering, security, and automation. My focus is
     <p>AWS, Azure, Linux, container platforms, and secure cloud architecture patterns.</p>
     <ul>
       <li>AWS</li>
-      <li>Azure</li>
       <li>Linux</li>
-      <li>Infrastructure as Code</li>
+      <li>Terraform</li>
     </ul>
   </div>
   <div style="border:1px solid var(--md-default-fg-color--lightest); border-radius:16px; padding:1rem; background:linear-gradient(135deg, rgba(16,185,129,0.08), rgba(0,0,0,0));">
@@ -24,7 +23,6 @@ I work at the intersection of engineering, security, and automation. My focus is
     <ul>
       <li>Docker</li>
       <li>Kubernetes</li>
-      <li>Helm</li>
       <li>Pod security</li>
     </ul>
   </div>
@@ -35,7 +33,6 @@ I work at the intersection of engineering, security, and automation. My focus is
       <li>Falco</li>
       <li>Burp Suite</li>
       <li>Nmap</li>
-      <li>Threat modeling</li>
     </ul>
   </div>
 </div>
@@ -70,8 +67,8 @@ I work at the intersection of engineering, security, and automation. My focus is
 
 <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:0.8rem; margin:1.3rem 0;">
   <span style="display:inline-block; background:var(--md-code-bg-color); border:1px solid var(--md-default-fg-color--lightest); border-radius:999px; padding:0.55rem 0.9rem; text-align:center; font-weight:600;">Python</span>
-  <span style="display:inline-block; background:var(--md-code-bg-color); border:1px solid var(--md-default-fg-color--lightest); border-radius:999px; padding:0.55rem 0.9rem; text-align:center; font-weight:600;">JavaScript</span>
-  <span style="display:inline-block; background:var(--md-code-bg-color); border:1px solid var(--md-default-fg-color--lightest); border-radius:999px; padding:0.55rem 0.9rem; text-align:center; font-weight:600;">TypeScript</span>
+  <span style="display:inline-block; background:var(--md-code-bg-color); border:1px solid var(--md-default-fg-color--lightest); border-radius:999px; padding:0.55rem 0.9rem; text-align:center; font-weight:600;">Bash</span>
+  <span style="display:inline-block; background:var(--md-code-bg-color); border:1px solid var(--md-default-fg-color--lightest); border-radius:999px; padding:0.55rem 0.9rem; text-align:center; font-weight:600;">Orchestration</span>
   <span style="display:inline-block; background:var(--md-code-bg-color); border:1px solid var(--md-default-fg-color--lightest); border-radius:999px; padding:0.55rem 0.9rem; text-align:center; font-weight:600;">GitHub Actions</span>
   <span style="display:inline-block; background:var(--md-code-bg-color); border:1px solid var(--md-default-fg-color--lightest); border-radius:999px; padding:0.55rem 0.9rem; text-align:center; font-weight:600;">CI/CD</span>
   <span style="display:inline-block; background:var(--md-code-bg-color); border:1px solid var(--md-default-fg-color--lightest); border-radius:999px; padding:0.55rem 0.9rem; text-align:center; font-weight:600;">IaC</span>

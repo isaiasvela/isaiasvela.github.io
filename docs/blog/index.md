@@ -38,14 +38,6 @@ I write about secure infrastructure, Kubernetes security, detection engineering,
   </div>
 </div>
 
-<!--
-Si quieres añadir más posts, usa la misma estructura:
-- cambia la fecha
-- cambia el título
-- cambia la ruta href
-- si quieres imagen real, sustituye IMG por <img src="...">
--->
-
 ## Explore more
 
 - [Research](../research/index.md)

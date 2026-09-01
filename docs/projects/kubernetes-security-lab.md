@@ -79,13 +79,12 @@ This project was created to answer a practical question: how well does a real Ku
 - Falcosidekick
 - Bash
 - YAML
-- Infrastructure as Code
 
 ## What I built
 
 - A reproducible Kubernetes security laboratory for attack and defense testing.
 - A runtime observation stack focused on detection visibility.
-- Adversary emulation workflows using MITRE CALDERA inside the cluster.
+- Adversary emulation workflows using MITRE CALDERA inside the cluster with a sandcat agent.
 - Falco-based detection logic for suspicious behavior in workloads.
 - Custom detection rules to improve signal quality beyond default coverage.
 - Comparative evaluation of security posture before and after rule tuning.
@@ -122,7 +121,7 @@ The lab is built around the core Kubernetes primitives: pods, deployments, servi
 
 ## MITRE Caldera
 
-MITRE CALDERA is used to simulate adversary techniques in a controlled and repeatable way. This allows the lab to validate whether the deployed security stack can detect misuse, suspicious process execution, privilege escalation, and lateral movement patterns.
+MITRE CALDERA is used to simulate adversary techniques in a controlled and repeatable way from inside the cluster. This allows the lab to validate whether the deployed security stack can detect misuse, suspicious process execution, privilege escalation, and lateral movement patterns.
 
 ## Falco
 

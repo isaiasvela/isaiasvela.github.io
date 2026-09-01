@@ -7,8 +7,8 @@ repo_name: GitHub
 
 theme:
   name: material
-  logo: images/favicon.svg
-  favicon: images/favicon.svg
+  logo: images/logo/favicon.svg
+  favicon: images/logo/favicon.svg
   features:
     - navigation.tabs
     - navigation.sections
@@ -36,11 +36,6 @@ theme:
 plugins:
   - search
   - tags
-  - blog:
-      blog_dir: blog
-      post_date_format: yyyy-MM-dd
-      archive: true
-      categories: true
 
 markdown_extensions:
   - admonition

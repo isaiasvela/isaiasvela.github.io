@@ -43,5 +43,3 @@ I write about secure infrastructure, Kubernetes security, detection engineering,
 - [Research](../research/index.md)
 - [Projects](../projects/index.md)
 - [Skills](../skills/index.md)
-
-## Posts

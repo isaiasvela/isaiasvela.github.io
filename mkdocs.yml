@@ -37,6 +37,9 @@ plugins:
   - search
   - tags
 
+extra_javascript:
+  - javascripts/goatcounter.js
+
 markdown_extensions:
   - admonition
   - attr_list

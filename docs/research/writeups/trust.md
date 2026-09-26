@@ -43,7 +43,7 @@ drwxrwxr-x godack godack 4.0 KB Sun Aug 17 10:41:42 2025  exploits
 drwxrwxr-x godack godack 4.0 KB Sun Aug 17 10:41:42 2025  nmap
 drwxrwxr-x godack godack 4.0 KB Sun Aug 17 10:41:42 2025  scripts
 ```
-## Reconnaissance
+## Recon
 Now that we know the IP address, we perform a full scan to find open ports in a stealthy and fast way:
 ```
 ❯ nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn 172.18.0.2 -oG allPorts

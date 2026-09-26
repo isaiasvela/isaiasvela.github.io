@@ -45,7 +45,7 @@ drwxrwxr-x godack godack 4.0 KB Tue Aug 19 10:06:44 2025 nmap
 drwxrwxr-x godack godack 4.0 KB Tue Aug 19 10:06:44 2025 scripts
 ```
 
-## Reconnaissance
+## Recon
 As usual, we start with a quick and stealthy scan on the victim’s IP to discover open ports. Then, we run a more thorough scan only on those ports (which makes it faster than scanning all 65k).
 
 ```

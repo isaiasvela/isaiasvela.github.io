@@ -81,7 +81,7 @@ I am actively exploring opportunities in:
       <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:var(--md-accent-fg-color); margin-bottom:0.5rem;">24 August 2026</div>
       <h3 style="margin:0 0 0.5rem; font-size:1.1rem; line-height:1.4;">Terraform GitHub repository bootstrap</h3>
       <p style="margin:0 0 0.8rem; color:var(--md-default-fg-color--light);">A practical guide to automating the creation of secure GitHub repositories with Terraform and reusable defaults.</p>
-      <a href="posts/github-repository-bootstrap/" style="font-weight:600;">Read more →</a>
+      <a href="blog/posts/github-repository-bootstrap/" style="font-weight:600;">Read more →</a>
     </div>
   </div>
 </div>

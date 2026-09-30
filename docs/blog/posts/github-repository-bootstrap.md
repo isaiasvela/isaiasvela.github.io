@@ -3,7 +3,8 @@ date: 2026-08-24
 title: Terraform GitHub repository bootstrap
 description: A practical guide to automating the creation of secure GitHub repositories with Terraform and reusable defaults.
 tags:
-  - Kubernetes
+  - Terraform
+  - Automation
   - Security
 ---
 

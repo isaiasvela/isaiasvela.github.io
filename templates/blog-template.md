@@ -1,28 +1,19 @@
 ---
-date: 2026-08-22
+date: YYYY-MM-DD
 title: Post Title
-description: Short description
+description: One-line summary. Shown on the card, in meta tags, and search results.
+image: images/blog/thumbnails/<slug>.png
 tags:
-  - Kubernetes
-  - Security
+  - Tag1
+  - Tag2
 ---
 
 # Post Title
 
-Short introduction.
+Intro paragraph. Everything above `<!-- more -->` becomes the card excerpt on the blog index, so make these first lines count.
+
+<!-- more -->
 
 ## Context
-
-...
-
-## What I learned
-
-...
-
-## Takeaways
-
-...
-
-## References
 
 ...

@@ -2,6 +2,7 @@
 date: 2026-09-30
 title: GitHub repository bootstrap, part 2
 description: How the Terraform repository bootstrap evolved with safer inputs, safer operations, and a smoother workflow.
+image: images/blog/thumbnails/GithubBootstrap2.png
 tags:
   - Terraform
   - Automation
@@ -11,6 +12,8 @@ tags:
 # GitHub repository bootstrap, part 2
 
 Safer inputs, safer operations: what changed since the first version
+
+<!-- more -->
 
 ## Context
 

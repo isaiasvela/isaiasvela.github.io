@@ -5,22 +5,27 @@ description: Selected portfolio projects in DevSecOps, cloud security, and platf
 
 # Projects
 
-This section highlights the engineering work I have built around secure deployment, cloud-native infrastructure, and automation.
+Engineering work around secure deployment, cloud-native infrastructure, and automation. Each page is the short version — setup and usage docs live in the repository.
 
-## Featured projects
-
+<div class="sv-grid" markdown="1">
+<div class="sv-card" markdown="1"><div class="sv-card-body" markdown="1">
 ### [Kubernetes Security Lab](kubernetes-security-lab.md)
 
-A hands-on security lab for Kubernetes hardening, attack simulation, and detection engineering.
-
+Bachelor's thesis: Falco runtime detection validated with MITRE CALDERA adversary emulation.
+</div></div>
+<div class="sv-card" markdown="1"><div class="sv-card-body" markdown="1">
 ### [GitHub Bootstrap](github-bootstrap.md)
 
-A repository bootstrap for modern developer workflows, automation, and consistent engineering standards.
-
+Terraform automation for secure, repeatable GitHub repository setup.
+</div></div>
+<div class="sv-card" markdown="1"><div class="sv-card-body" markdown="1">
 ### [TimeTrack](timetrack.md)
 
-A productivity and work time management application built to support planning and operational tracking.
-
+Containerized time-tracking app with SAML auth and Kubernetes deployment.
+</div></div>
+<div class="sv-card" markdown="1"><div class="sv-card-body" markdown="1">
 ### [Weather Dashboard](weather-dashboard.md)
 
-A cloud-friendly dashboard project showing pipeline automation and frontend deployment practices.
+Frontend dashboard proving a disciplined CI/CD-to-Pages workflow.
+</div></div>
+</div>

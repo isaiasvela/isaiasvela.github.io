@@ -2,6 +2,7 @@
 date: 2026-08-24
 title: Terraform GitHub repository bootstrap
 description: A practical guide to automating the creation of secure GitHub repositories with Terraform and reusable defaults.
+image: images/blog/thumbnails/GithubBootstrap.png
 tags:
   - Terraform
   - Automation
@@ -11,6 +12,8 @@ tags:
 # Terraform GitHub repository bootstrap
 
 A practical way to automate the creation of secure GitHub repositories with Terraform
+
+<!-- more -->
 
 ## Context
 

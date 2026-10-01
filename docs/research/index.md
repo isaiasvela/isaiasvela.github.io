@@ -5,16 +5,33 @@ description: Security research, offensive lab notes, and technical writeups.
 
 # Research
 
-This section gathers the technical notes, writeups & procedures I publish while exploring security engineering, vulnerability analysis, and cloud-native security topics.
+Offensive lab walkthroughs from hands-on practice: DockerLabs vulnerable machines, from recon to root.
 
 ## Writeups
 
-- [First Hacking](writeups/first-hacking.md)
-- [Injection](writeups/injection.md)
-- [Trust](writeups/trust.md)
-- [Obsession](writeups/obsession.md)
+<div class="sv-grid" markdown="1">
+<div class="sv-card" markdown="1"><div class="sv-card-body" markdown="1">
+<div class="sv-date">Super easy</div>
+### [First Hacking](writeups/first-hacking.md)
 
-## Notes
+First foothold walkthrough: deploying the lab and getting initial access.
+</div></div>
+<div class="sv-card" markdown="1"><div class="sv-card-body" markdown="1">
+<div class="sv-date">Super easy</div>
+### [Injection](writeups/injection.md)
 
-- [Web Vulnerabilities](notes/web-vulnerabilities.md)
-- [Pentesting Tools](notes/pentesting-tools.md)
+Exploiting an injection flaw to break out and escalate.
+</div></div>
+<div class="sv-card" markdown="1"><div class="sv-card-body" markdown="1">
+<div class="sv-date">Super easy</div>
+### [Trust](writeups/trust.md)
+
+An offensive lab on misplaced trust and security misconfigurations.
+</div></div>
+<div class="sv-card" markdown="1"><div class="sv-card-body" markdown="1">
+<div class="sv-date">Super easy</div>
+### [Obsession](writeups/obsession.md)
+
+Persistence and lateral movement patterns in a lab environment.
+</div></div>
+</div>

@@ -1,79 +1,34 @@
 ---
 title: Project Name
-description: Short, professional description of the project and its value.
+description: One-line value proposition of the project.
 ---
 
 # Project Name
 
-Short introduction explaining what the project is and why it matters.
+One-paragraph pitch: what it is and why it matters.
 
 ## Problem
 
-Describe the challenge, pain point, or operational problem this project addresses.
+The challenge or pain point, in 2-4 lines. No setup instructions here.
 
 ## Solution
 
-Explain the approach, the design decisions, and the goal of the solution.
+The approach and what was built, in 2-5 lines. No file trees, inputs, or usage docs here.
 
-## Architecture
+## Result
 
-```text
-+---------------------+
-| Client / user       |
-+---------------------+
-          |
-          v
-+---------------------+
-| Frontend / app      |
-| - UI                |
-| - workflows         |
-+---------------------+
-          |
-          v
-+---------------------+
-| Backend / logic     |
-| - API               |
-| - business rules    |
-+---------------------+
-          |
-          v
-+---------------------+
-| Data layer / infra  |
-| - database          |
-| - storage           |
-+---------------------+
-```
+Outcomes, lessons, or what the project proved. Link related blog posts if they exist:
 
-## Technologies
+- [Related post](../blog/posts/<slug>.md)
 
-- Technology 1
-- Technology 2
-- Technology 3
-- Technology 4
+<div class="sv-chips" markdown="1">
+<span class="sv-chip">Tech 1</span>
+<span class="sv-chip">Tech 2</span>
+<span class="sv-chip">Tech 3</span>
+</div>
 
-## What I built
+## Repository
 
-- Feature 1
-- Feature 2
-- Feature 3
-- Feature 4
-
-## Key decisions
-
-- Decision 1
-- Decision 2
-- Decision 3
-
-## Lessons learned
-
-- Lesson 1
-- Lesson 2
-- Lesson 3
-
-## Results
-
-Describe outcomes, improvements, or what the project proved.
-
-## GitHub Repository
+Setup, inputs, and usage docs live in the repo (single source of truth — never duplicate them here):
 
 - [Project Name](https://github.com/your-user/project-name)

@@ -2,7 +2,6 @@
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Deployed-brightgreen)](https://isaiasvela.github.io/)
 [![MkDocs Material](https://img.shields.io/badge/MkDocs-Material-blue)](https://squidfunk.github.io/mkdocs-material/)
-[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
 Cybersecurity and development documentation site built with MkDocs Material.
 
@@ -12,15 +11,21 @@ Cybersecurity and development documentation site built with MkDocs Material.
 ## 📁 Project Structure
 ```
 .
-├── docs/               # Documentation source files
-│ ├── index.md          # Homepage
-│ ├── writeups/         # Cybersecurity writeups
-│ ├── notes/            # Technical notes
-│ └── images/           # Images and assets
-├── mkdocs.yml          # MkDocs configuration
-├── .github/workflows/  # GitHub Actions workflows
-│ └── deploy.yml        # Auto-deployment to GitHub Pages
-└── README.md           # This file
+├── docs/                    # Documentation source files
+│ ├── index.md / cv.md       # Homepage + CV
+│ ├── blog/posts/            # Blog posts (auto-listed by Material blog plugin)
+│ ├── projects/              # Project briefs
+│ ├── research/writeups/     # Cybersecurity writeups
+│ ├── tags.md                # Tag listing page
+│ ├── images/                # Images and assets
+│ ├── stylesheets/           # Custom CSS (s4vitar.css)
+│ └── javascripts/           # Custom JS (analytics)
+├── overrides/               # Theme overrides (blog post cards)
+├── templates/               # Page/post templates for new content
+├── mkdocs.yml               # MkDocs configuration (nav, theme, plugins)
+├── .github/workflows/       # GitHub Actions workflows
+│ └── deploy.yml             # Auto-deployment to GitHub Pages
+└── README.md                # This file
 ```
 
 
@@ -53,8 +58,8 @@ mkdocs serve
 # Build static site to 'site/' directory
 mkdocs build
 
-# Build with verbose output
-mkdocs build --verbose
+# Verify before pushing (treats warnings as errors)
+mkdocs build --strict
 ```
 
 ## Deployment

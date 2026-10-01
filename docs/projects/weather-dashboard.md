@@ -5,111 +5,31 @@ description: Frontend weather dashboard with automated CI/CD, deployment automat
 
 # Weather Dashboard with CI/CD
 
-A weather dashboard application with automated CI/CD pipeline using GitHub Actions.
+A weather dashboard backed by a disciplined delivery workflow: every change goes through lint, test, build, and automatic deployment to GitHub Pages.
 
 ## Problem
 
-Modern frontend projects need more than a functional interface; they also need a reliable delivery workflow. Without automation, testing, build validation, and deployment become manual and error-prone activities that slow down iteration and reduce confidence.
+Frontend projects need more than a working interface — without automation, validation and deployment become manual, error-prone chores that slow iteration and erode confidence.
 
-This project was designed to combine a useful weather dashboard with a disciplined continuous delivery workflow so the app can be built, validated, and deployed consistently.
+## Solution
 
-## Features
+A responsive dashboard consuming an external weather API, wrapped in a GitHub Actions pipeline (lint → test → build → deploy → notify) publishing to Pages on every push.
 
-- Real-time weather display connected to an external API
-- Responsive and user-friendly interface
-- Automated testing and validation
-- Continuous deployment to GitHub Pages
-- Build artifacts and status reporting
+## Result
 
-## Architecture
+Small app, real habits: deployment friction near zero, releases boring and predictable. Good engineering practices scale even when the application itself is modest.
 
-```text
-+------------------------+
-| External weather API   |
-+------------------------+
-            |
-            v
-+------------------------+
-| Frontend application   |
-| - UI                   |
-| - dashboard layout     |
-| - API consumption      |
-+------------------------+
-            |
-            v
-+------------------------+
-| CI/CD pipeline         |
-| - lint & test          |
-| - build                |
-| - deploy               |
-| - status notifications|
-+------------------------+
-            |
-            v
-+------------------------+
-| GitHub Pages           |
-| published app          |
-+------------------------+
-```
+<div class="sv-chips" markdown="1">
+<span class="sv-chip">JavaScript</span>
+<span class="sv-chip">HTML / CSS</span>
+<span class="sv-chip">GitHub Actions</span>
+<span class="sv-chip">GitHub Pages</span>
+</div>
 
-## CI/CD pipeline
+## Links
 
-The project includes a complete automated delivery flow with:
-
-1. Lint & Test — code quality checks and test execution
-2. Build — package the application
-3. Deploy — automatic deployment to GitHub Pages
-4. Notify — status reporting and workflow visibility
-
-## Technologies
-
-- JavaScript
-- HTML / CSS
-- React or frontend app tooling
-- GitHub Actions
-- GitHub Pages
-- API integration
-- CI/CD automation
-
-## What I built
-
-- A responsive weather dashboard with real-time data integration
-- A complete CI/CD pipeline for build, validation, and deployment
-- Automated deployment to GitHub Pages for easy public access
-- A lightweight example of frontend delivery automation in practice
-
-## Local development
-
-To run locally:
-
-```bash
-# Install dependencies
-npm install
-
-# Run tests
-npm test
-
-# Start local server
-npm start
-```
-
-## Deployment
-
-The application is automatically deployed to:
-
-- https://isaiasvela.github.io/weather-dashboard/
-
-Workflow runs can be reviewed here:
-
-- https://github.com/isaiasvela/weather-dashboard/actions
-
-## Lessons learned
-
-- Frontend reliability depends on both product quality and delivery discipline.
-- Automation reduces deployment friction and increases confidence in releases.
-- Small projects are valuable for practicing real-world DevOps workflows.
-- Good engineering practices scale even when the application itself is modest.
-
-## GitHub Repository
+Code and pipeline docs live in the repo (single source of truth):
 
 - [Weather Dashboard](https://github.com/isaiasvela/weather-dashboard)
+- [Live app](https://isaiasvela.github.io/weather-dashboard/)
+- [Workflow runs](https://github.com/isaiasvela/weather-dashboard/actions)

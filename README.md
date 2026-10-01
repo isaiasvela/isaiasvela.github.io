@@ -18,7 +18,7 @@ Cybersecurity and development documentation site built with MkDocs Material.
 │ ├── research/writeups/     # Cybersecurity writeups
 │ ├── tags.md                # Tag listing page
 │ ├── images/                # Images and assets
-│ ├── stylesheets/           # Custom CSS (s4vitar.css)
+│ ├── stylesheets/           # Custom CSS (styles.css)
 │ └── javascripts/           # Custom JS (analytics)
 ├── overrides/               # Theme overrides (blog post cards)
 ├── templates/               # Page/post templates for new content

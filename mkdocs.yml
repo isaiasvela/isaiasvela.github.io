@@ -35,7 +35,7 @@ plugins:
       authors: false
 
 extra_css:
-  - stylesheets/s4vitar.css
+  - stylesheets/styles.css
 
 extra_javascript:
   - javascripts/goatcounter.js

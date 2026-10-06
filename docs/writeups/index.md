@@ -11,34 +11,34 @@ Walkthroughs de laboratorios ofensivos desde la práctica hands-on: máquinas vu
 
 <div class="sv-grid" markdown="1">
 <div class="sv-card" markdown="1"><div class="sv-card-body" markdown="1">
-<div class="sv-date">Super easy</div>
+<div class="sv-date sv-date--supereasy">Super easy</div>
 ### [First Hacking](writeups/first-hacking.md)
 
 Primer foothold: desplegar el laboratorio y conseguir el acceso inicial.
 </div></div>
 <div class="sv-card" markdown="1"><div class="sv-card-body" markdown="1">
-<div class="sv-date">Super easy</div>
+<div class="sv-date sv-date--supereasy">Super easy</div>
 ### [Injection](writeups/injection.md)
 
 Explotar un fallo de inyección para salir y escalar.
 </div></div>
 <div class="sv-card" markdown="1"><div class="sv-card-body" markdown="1">
-<div class="sv-date">Super easy</div>
+<div class="sv-date sv-date--supereasy">Super easy</div>
 ### [Trust](writeups/trust.md)
 
 Un laboratorio ofensivo sobre confianza mal puesta y misconfigurations.
 </div></div>
 <div class="sv-card" markdown="1"><div class="sv-card-body" markdown="1">
-<div class="sv-date">Super easy</div>
+<div class="sv-date sv-date--supereasy">Super easy</div>
 ### [Obsession](writeups/obsession.md)
 
 FTP anonymous, fuerza bruta SSH y escalada con vim.
 
 </div></div>
 <div class="sv-card" markdown="1"><div class="sv-card-body" markdown="1">
-<div class="sv-date">Super easy</div>
+<div class="sv-date sv-date--supereasy">Super easy</div>
 ### [Acme](writeups/acme.md)
 
-Patrones de persistencia y movimiento lateral en un laboratorio.
+De recon a root: banner SSH mal configurado y escalada con setuid.
 </div></div>
 </div>

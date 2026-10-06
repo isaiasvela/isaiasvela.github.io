@@ -121,6 +121,12 @@
   margin-bottom: 0.5rem;
   font-family: var(--md-code-font-family);
 }
+/* difficulty colors (badges keep .sv-date for shape, add one modifier) */
+.sv-date--supereasy { color: #27c93f; }
+.sv-date--easy { color: #a3e635; }
+.sv-date--medium { color: #ebbd2d; }
+.sv-date--hard { color: #f0883e; }
+.sv-date--insane { color: #bc8cff; }
 
 /* ---------- blog plugin tuning ---------- */
 .md-post--excerpt .md-post__content h2 a {

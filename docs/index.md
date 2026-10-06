@@ -39,6 +39,8 @@ Estoy buscando activamente oportunidades como:
 - Cloud Security Engineer
 - Cybersecurity Engineer
 
+[Ver CV completo →](cv.md)
+
 ## Proyectos destacados
 
 <div class="sv-grid" markdown="1">
@@ -59,10 +61,32 @@ Aplicación de registro de jornada para dar soporte a la productividad y la visi
 </div></div>
 </div>
 
+[Ver todos →](projects/index.md)
+
 ## Últimos writeups de seguridad
 
-- [Trust](writeups/writeups/trust.md) — Un laboratorio ofensivo sobre confianza mal puesta y misconfigurations de seguridad.
-- [Obsession](writeups/writeups/obsession.md) — Un laboratorio de seguridad ofensiva centrado en persistencia y patrones de movimiento lateral.
+<div class="sv-grid" markdown="1">
+<div class="sv-card" markdown="1"><div class="sv-card-body" markdown="1">
+<div class="sv-date sv-date--supereasy">Super easy</div>
+### [Acme](writeups/writeups/acme.md)
+
+De recon a root: banner SSH mal configurado y escalada con setuid.
+</div></div>
+<div class="sv-card" markdown="1"><div class="sv-card-body" markdown="1">
+<div class="sv-date sv-date--supereasy">Super easy</div>
+### [Obsession](writeups/writeups/obsession.md)
+
+FTP anonymous, fuerza bruta SSH y escalada con vim.
+</div></div>
+<div class="sv-card" markdown="1"><div class="sv-card-body" markdown="1">
+<div class="sv-date sv-date--supereasy">Super easy</div>
+### [Trust](writeups/writeups/trust.md)
+
+Un laboratorio ofensivo sobre confianza mal puesta y misconfigurations.
+</div></div>
+</div>
+
+[Ver todos →](writeups/index.md)
 
 ## Últimas publicaciones
 
@@ -88,6 +112,8 @@ Guía práctica para automatizar la creación de repositorios GitHub seguros con
 </div>
 </div>
 </div>
+
+[Ver todos →](blog/index.md)
 
 ## Áreas de interés
 

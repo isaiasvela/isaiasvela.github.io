@@ -1,3 +1,15 @@
+---
+title: Injection
+description: Explotación de SQL injection y escalada de privilegios con env/setuid.
+tags:
+  - Super easy
+  - SQLi
+  - nmap
+  - SSH
+  - Privilege Escalation
+  - setuid
+---
+
 # Writeup Injection
 
 **Difficulty:** Super easy<br>

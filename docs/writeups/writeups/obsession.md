@@ -1,3 +1,16 @@
+---
+title: Obsession
+description: FTP anonymous, fuerza bruta SSH con Hydra y escalada con vimsudo.
+tags:
+  - Super easy
+  - FTP
+  - Hydra
+  - nmap
+  - SSH
+  - Privilege Escalation
+  - sudo
+---
+
 # Writeup Obsession
 
 **Difficulty:** Super easy  

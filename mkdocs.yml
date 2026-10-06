@@ -40,6 +40,7 @@ extra_css:
 extra_javascript:
   - javascripts/goatcounter.js
   - javascripts/prompts.js
+  - javascripts/writeup-filter.js
 
 markdown_extensions:
   - admonition

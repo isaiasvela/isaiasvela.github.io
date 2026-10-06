@@ -1,3 +1,14 @@
+---
+title: Acme
+description: De recon a root, banner SSH mal configurado y escalada con setuid.
+tags:
+  - Super easy
+  - nmap
+  - SSH
+  - Privilege Escalation
+  - setuid
+---
+
 # Writeup Acme
 
 **Difficulty:** Super easy<br>

@@ -323,6 +323,58 @@
 }
 .md-typeset pre::-webkit-scrollbar-track { background: transparent; }
 
+/* ---------- writeups filter ---------- */
+.sv-filter {
+  display: grid;
+  gap: 0.7rem;
+  margin: 1.2rem 0 0.4rem;
+}
+.sv-filter input[type="search"] {
+  width: 100%;
+  box-sizing: border-box;
+  background: #010409;
+  border: 1px solid var(--sv-border);
+  border-radius: 10px;
+  padding: 0.6rem 0.9rem;
+  color: var(--md-default-fg-color);
+  font: inherit;
+  font-size: 0.85rem;
+}
+.sv-filter input[type="search"]:focus {
+  outline: none;
+  border-color: var(--md-accent-fg-color);
+}
+.sv-filter-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.sv-filter-btn {
+  font: inherit;
+  cursor: pointer;
+  background: var(--sv-card-bg);
+  color: var(--md-default-fg-color--light);
+  border: 1px solid var(--sv-border);
+  border-radius: 999px;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+.sv-filter-btn[data-filter="super easy"] { color: #27c93f; }
+.sv-filter-btn[data-filter="easy"] { color: #a3e635; }
+.sv-filter-btn[data-filter="medium"] { color: #ebbd2d; }
+.sv-filter-btn[data-filter="hard"] { color: #f0883e; }
+.sv-filter-btn[data-filter="insane"] { color: #bc8cff; }
+.sv-filter-btn.is-active {
+  border-color: var(--md-accent-fg-color);
+  color: var(--md-accent-fg-color);
+}
+.sv-filter-empty {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
 /* ---------- CV timeline ---------- */
 .sv-timeline { margin: 1.4rem 0; }
 .sv-tl-item {

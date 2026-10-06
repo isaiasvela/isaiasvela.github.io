@@ -1,3 +1,16 @@
+---
+title: Trust
+description: Fuerza bruta SSH con Hydra y escalada de privilegios con vim vía sudo.
+tags:
+  - Super easy
+  - Gobuster
+  - Hydra
+  - SSH
+  - nmap
+  - Privilege Escalation
+  - sudo
+---
+
 # Writeup Trust
 
 **Difficulty:** Super easy<br>

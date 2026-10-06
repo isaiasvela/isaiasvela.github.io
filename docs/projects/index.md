@@ -1,31 +1,31 @@
 ---
-title: Projects
-description: Selected portfolio projects in DevSecOps, cloud security, and platform automation.
+title: Proyectos
+description: Proyectos destacados del portfolio en DevSecOps, cloud security y automatización de plataforma.
 ---
 
-# Projects
+# Proyectos
 
-Engineering work around secure deployment, cloud-native infrastructure, and automation. Each page is the short version — setup and usage docs live in the repository.
+Trabajo de ingeniería en torno a despliegue seguro, infraestructura cloud-native y automatización. Cada página es la versión corta — la instalación y el uso están en el repositorio.
 
 <div class="sv-grid" markdown="1">
 <div class="sv-card" markdown="1"><div class="sv-card-body" markdown="1">
 ### [Kubernetes Security Lab](kubernetes-security-lab.md)
 
-Bachelor's thesis: Falco runtime detection validated with MITRE CALDERA adversary emulation.
+TFG: detección en runtime con Falco validada con emulación de adversario MITRE CALDERA.
 </div></div>
 <div class="sv-card" markdown="1"><div class="sv-card-body" markdown="1">
 ### [GitHub Bootstrap](github-bootstrap.md)
 
-Terraform automation for secure, repeatable GitHub repository setup.
+Automatización con Terraform para una creación de repositorios GitHub segura y repetible.
 </div></div>
 <div class="sv-card" markdown="1"><div class="sv-card-body" markdown="1">
 ### [TimeTrack](timetrack.md)
 
-Containerized time-tracking app with SAML auth and Kubernetes deployment.
+App contenerizada de registro de jornada con auth SAML y despliegue en Kubernetes.
 </div></div>
 <div class="sv-card" markdown="1"><div class="sv-card-body" markdown="1">
 ### [Weather Dashboard](weather-dashboard.md)
 
-Frontend dashboard proving a disciplined CI/CD-to-Pages workflow.
+Dashboard frontend que demuestra un flujo disciplinado de CI/CD a Pages.
 </div></div>
 </div>

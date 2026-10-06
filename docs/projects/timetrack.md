@@ -1,23 +1,23 @@
 ---
 title: TimeTrack
-description: Full-stack time tracking application with secure authentication, Kubernetes deployment, and employee check-in workflows.
+description: Aplicación full-stack de registro de jornada con autenticación segura, despliegue en Kubernetes y flujos de fichaje.
 ---
 
 # TimeTrack
 
-A full-stack, containerized time tracking app: employees register check-ins and check-outs through a Next.js frontend, a Node API, and MongoDB — behind NextAuth.js with SAML, deployable via Compose locally or manifests on Kubernetes.
+Una app full-stack y contenerizada de registro de jornada: los empleados registran entradas y salidas desde un frontend Next.js, una API Node y MongoDB — detrás de NextAuth.js con SAML, desplegable con Compose en local o con manifiestos en Kubernetes.
 
-## Problem
+## Problema
 
-Inconsistent time tracking means poor operational visibility and manual effort recording hours. Teams need attendance data they can trust without burdening employees.
+Un registro de jornada inconsistente significa poca visibilidad operativa y esfuerzo manual registrando horas. Los equipos necesitan datos de asistencia fiables sin cargar a los empleados.
 
-## Solution
+## Solución
 
-Structured check-in/check-out flows with secure session management, RESTful time-record endpoints, Mongo-backed persistence, and a modular multi-service deployment (frontend, API, database) that scales and stays consistent across environments.
+Flujos estructurados de check-in/check-out con gestión segura de sesiones, endpoints REST de registros de tiempo, persistencia en Mongo y un despliegue modular multiservicio (frontend, API, base de datos) que escala y se mantiene consistente entre entornos.
 
-## Result
+## Resultado
 
-A real-world business app combining product thinking with secure engineering: clean service boundaries, environment parity from laptop to cluster, and a workflow simple enough that people actually use it.
+Una app de negocio real que combina visión de producto con ingeniería segura: fronteras limpias entre servicios, paridad de entornos del portátil al clúster y un flujo tan simple que la gente lo usa de verdad.
 
 <div class="sv-chips" markdown="1">
 <span class="sv-chip">Next.js</span>
@@ -29,8 +29,8 @@ A real-world business app combining product thinking with secure engineering: cl
 <span class="sv-chip">Kubernetes</span>
 </div>
 
-## Repository
+## Repositorio
 
-Setup and deployment docs live in the repo (single source of truth):
+Setup y docs de despliegue en el repo (fuente única de verdad, en inglés):
 
 - [TimeTrack](https://github.com/isaiasvela/TimeTrack)

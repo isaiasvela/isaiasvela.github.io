@@ -1,14 +1,7 @@
 ---
 title: Blog
-description: Engineering notes, security research, and cloud-native learning from DevSecOps practice.
+description: Notas de ingeniería, seguridad y aprendizaje cloud-native desde la práctica DevSecOps.
 ---
 
 # Blog
 
-Short, practical notes from building and defending cloud-native systems.
-
-## Explore more
-
-- [Research](../research/index.md)
-- [Projects](../projects/index.md)
-- [Tags](../tags.md)

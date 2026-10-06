@@ -1,6 +1,6 @@
 ---
 title: Writeup Title
-description: Security research writeup covering a technical assessment and findings.
+description: Security writeups writeup covering a technical assessment and findings.
 tags:
   - Web Security
   - Exploit

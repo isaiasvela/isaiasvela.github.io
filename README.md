@@ -15,7 +15,7 @@ Cybersecurity and development documentation site built with MkDocs Material.
 │ ├── index.md / cv.md       # Homepage + CV
 │ ├── blog/posts/            # Blog posts (auto-listed by Material blog plugin)
 │ ├── projects/              # Project briefs
-│ ├── research/writeups/     # Cybersecurity writeups
+│ ├── writeups/writeups/     # Cybersecurity writeups
 │ ├── tags.md                # Tag listing page
 │ ├── images/                # Images and assets
 │ ├── stylesheets/           # Custom CSS (styles.css)

@@ -1,7 +1,7 @@
 ---
 date: 2026-08-24
-title: Terraform GitHub repository bootstrap
-description: A practical guide to automating the creation of secure GitHub repositories with Terraform and reusable defaults.
+title: Bootstrap de repositorios GitHub con Terraform
+description: Guía práctica para automatizar la creación de repositorios GitHub seguros con Terraform y defaults reutilizables.
 image: images/blog/thumbnails/GithubBootstrap.png
 tags:
   - Terraform
@@ -9,77 +9,81 @@ tags:
   - Security
 ---
 
-# Terraform GitHub repository bootstrap
+# Bootstrap de repositorios GitHub con Terraform
 
-A practical way to automate the creation of secure GitHub repositories with Terraform
+Una forma práctica de automatizar la creación de repositorios GitHub seguros con Terraform
 
 <!-- more -->
 
-## Context
+## Contexto
 
-GitHub has become the standard platform for software collaboration. It gives teams a simple way to manage version control, review code, and share work across projects. However, creating repositories manually still tends to produce inconsistencies: default branch settings differ, permissions are not always aligned with organizational standards, and security controls are often missing from the beginning.
+GitHub se ha convertido en la plataforma estándar para colaborar en software. Da a los equipos una forma sencilla de gestionar el versionado, revisar código y compartir trabajo entre proyectos. Sin embargo, crear repositorios a mano suele producir inconsistencias: la configuración de la rama por defecto difiere, los permisos no siempre están alineados con los estándares de la organización y los controles de seguridad a menudo faltan desde el principio.
 
-That was the problem I wanted to solve. While creating a repository for a project, I asked myself: why not automate the process and apply the same defaults every time? That question led me to build a Terraform-based bootstrap for GitHub repositories.
+Ese era el problema que quería resolver. Mientras creaba un repositorio para un proyecto, me pregunté: ¿por qué no automatizar el proceso y aplicar los mismos defaults cada vez? Esa pregunta me llevó a construir un bootstrap con Terraform para repositorios GitHub.
 
-The goal was simple: create repositories consistently, reduce manual setup, and apply sensible defaults from day one.
+El objetivo era simple: crear repositorios de forma consistente, reducir el setup manual y aplicar defaults sensatos desde el día uno.
 
-## Why automate repository creation?
+## ¿Por qué automatizar la creación de repositorios?
 
-Manual repository creation is fast at first glance, but it can become expensive at scale. Teams usually need to repeat the same setup across multiple projects: repository visibility, branch protection, default permissions, issue templates, and other conventions.
+Crear repositorios a mano parece rápido a primera vista, pero a escala puede salir caro. Los equipos suelen repetir el mismo setup en varios proyectos: visibilidad del repositorio, branch protection, permisos por defecto, plantillas de issues y otras convenciones.
 
-Without automation, each repository can drift away from the desired baseline. In a security-conscious environment, that is particularly risky because small configuration gaps can accumulate quickly.
+Sin automatización, cada repositorio puede desviarse del baseline deseado. En un entorno concienciado con la seguridad, eso es especialmente arriesgado porque pequeños gaps de configuración se acumulan rápido.
 
-This is where Terraform becomes useful. Instead of creating repositories by hand, we can define the desired state in code and let Terraform reconcile it automatically.
+Aquí es donde Terraform ayuda. En vez de crear repositorios a mano, definimos el estado deseado en código y dejamos que Terraform lo reconcilie automáticamente.
 
-## The project
+## El proyecto
 
-The project I created uses Terraform together with the GitHub provider to generate repositories with a set of configurable inputs. The setup is intentionally simple, but it captures the core idea: infrastructure as code should also apply to repository governance.
+El proyecto que creé usa Terraform junto con el provider de GitHub para generar repositorios con una serie de inputs configurables. El setup es intencionadamente simple, pero captura la idea central: infrastructure as code también debería aplicarse a la gobernanza de repositorios.
 
-The repository bootstrap accepts a few key inputs such as:
+El bootstrap acepta unos inputs clave como:
 
 - repo owner
 - repository name
 - visibility
 - description
-- README.md template
+- plantilla de README.md
 
-From there, Terraform applies the configuration and ensures the resource is created consistently.
+Desde ahí, Terraform aplica la configuración y garantiza que el recurso se crea de forma consistente.
 
-## What I learned
+## Qué aprendí
 
-This project helped me strengthen several practical skills:
+Este proyecto me ayudó a reforzar varias habilidades prácticas:
 
-- Terraform fundamentals: variables, resources, providers, and declarative configuration
-- The GitHub provider model and how repository attributes are represented in Terraform
-- The value of codifying defaults to avoid inconsistent setups
-- How infrastructure patterns can be applied beyond cloud resources, including developer workflows
-- The importance of idempotent and repeatable tooling in team environments
+- Fundamentos de Terraform: variables, resources, providers y configuración declarativa
+- El modelo del provider de GitHub y cómo se representan los atributos del repositorio en Terraform
+- El valor de codificar defaults para evitar setups inconsistentes
+- Cómo los patrones de infraestructura se pueden aplicar más allá de recursos cloud, incluyendo developer workflows
+- La importancia de tooling idempotente y repetible en equipos
 
-One of the most useful lessons was realizing that automation is not only about provisioning infrastructure. It also helps establish consistency in how software projects are created and managed.
+Una de las lecciones más útiles fue darme cuenta de que la automatización no solo va de provisionar infraestructura. También ayuda a establecer consistencia en cómo se crean y gestionan los proyectos de software.
 
-## Why this is useful in real teams
+## Por qué esto es útil en equipos reales
 
-For small teams and larger organizations alike, repository bootstrapping reduces friction. It eliminates repetitive manual steps and helps maintain a baseline standard over time.
+Tanto para equipos pequeños como para organizaciones grandes, el bootstrapping de repositorios reduce fricción. Elimina pasos manuales repetitivos y ayuda a mantener un estándar base en el tiempo.
 
-A pattern like this is especially useful when teams want to enforce:
+Un patrón así es especialmente útil cuando los equipos quieren forzar:
 
-- standardized GitHub repository naming
-- consistent visibility rules
-- security defaults from the start
-- repeatable project onboarding
-- reduced developer setup time
+- naming estándar de repositorios GitHub
+- reglas de visibilidad consistentes
+- security defaults desde el inicio
+- onboarding de proyectos repetible
+- menos tiempo de setup para desarrolladores
 
-In other words, the goal is not just to create a repository faster, but to create it correctly.
+En otras palabras, el objetivo no es solo crear un repositorio más rápido, sino crearlo correctamente.
 
-## Takeaways
+## Conclusiones
 
-This project reinforced something I consider important in software engineering: automation should simplify work without sacrificing clarity or control.
+Este proyecto reforzó algo que considero importante en ingeniería de software: la automatización debería simplificar el trabajo sin sacrificar claridad ni control.
 
-Using Terraform to bootstrap GitHub repositories gives me a repeatable, transparent, and scalable way to create project foundations. It removes the guesswork from initial setup and turns repository creation into a predictable process.
+Usar Terraform para el bootstrap de repositorios GitHub me da una forma repetible, transparente y escalable de crear bases de proyecto. Elimina las adivinanzas del setup inicial y convierte la creación de repositorios en un proceso predecible.
 
-For me, this was a great example of how simple automation can improve developer experience, reduce errors, and create a more consistent technical environment.
+Para mí, fue un gran ejemplo de cómo una automatización simple puede mejorar la developer experience, reducir errores y crear un entorno técnico más consistente.
 
-## References
+## TL;DR in English
+
+Automated GitHub repository creation with Terraform: consistent defaults, less manual setup, security from day one.
+
+## Referencias
 
 - Terraform GitHub provider documentation: https://registry.terraform.io/providers/integrations/github/latest/docs
 - Terraform official documentation: https://developer.hashicorp.com/terraform

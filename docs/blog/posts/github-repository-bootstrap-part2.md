@@ -1,7 +1,7 @@
 ---
 date: 2026-09-30
-title: GitHub repository bootstrap, part 2
-description: How the Terraform repository bootstrap evolved with safer inputs, safer operations, and a smoother workflow.
+title: Bootstrap de repositorios GitHub, parte 2
+description: Cómo evolucionó el bootstrap de repositorios con Terraform hacia inputs más seguros, operaciones más seguras y un workflow más fluido.
 image: images/blog/thumbnails/GithubBootstrap2.png
 tags:
   - Terraform
@@ -9,63 +9,67 @@ tags:
   - Security
 ---
 
-# GitHub repository bootstrap, part 2
+# Bootstrap de repositorios GitHub, parte 2
 
-Safer inputs, safer operations: what changed since the first version
+Inputs más seguros, operaciones más seguras: qué cambió desde la primera versión
 
 <!-- more -->
 
-## Context
+## Contexto
 
-In the [first post](./github-repository-bootstrap.md), I described a Terraform-based bootstrap that creates GitHub repositories with consistent defaults. Since then I have used it for real, and real usage exposed every rough edge: cryptic provider errors on bad inputs, no starting point for configuration, a `destroy` command one typo away from deleting a repository, and a CI pipeline testing an outdated Terraform version.
+En el [primer post](./github-repository-bootstrap.md), describí un bootstrap con Terraform que crea repositorios GitHub con defaults consistentes. Desde entonces lo he usado de verdad, y el uso real expuso cada aspereza: errores crípticos del provider con inputs malos, ningún punto de partida para la configuración, un comando `destroy` a un typo de borrar un repositorio, y un pipeline de CI probando una versión desactualizada de Terraform.
 
-This post covers what I changed and why. No new concepts, just the hardening a tool needs once it leaves the demo stage.
+Este post cubre qué cambié y por qué. Sin conceptos nuevos, solo el hardening que una herramienta necesita cuando sale de la fase demo.
 
-## Safer inputs
+## Inputs más seguros
 
-The bootstrap now fails fast with clear messages instead of deep provider errors:
+El bootstrap ahora falla rápido con mensajes claros en vez de errores profundos del provider:
 
-- every free-text variable is validated (no empty values, no spaces where GitHub forbids them)
-- `repo_visibility` only accepts `public` or `private`
-- `repo_description` is capped at GitHub's 350-character limit
-- required approving reviews are configurable per project (`0`–`6`, default `0`)
+- cada variable de texto libre está validada (sin valores vacíos, sin espacios donde GitHub los prohíbe)
+- `repo_visibility` solo acepta `public` o `private`
+- `repo_description` está limitada a los 350 caracteres de GitHub
+- las revisiones aprobatorias requeridas son configurables por proyecto (`0`–`6`, por defecto `0`)
 
-Variable validation runs before Terraform touches the API, so a typo costs seconds, not a half-applied plan. A committed `terraform.tfvars.example` makes first setup a single copy command, while the real `tfvars` stays gitignored.
+La validación de variables corre antes de que Terraform toque la API, así que un typo cuesta segundos, no un plan aplicado a medias. Un `terraform.tfvars.example` versionado hace que el primer setup sea un solo comando de copia, mientras el `tfvars` real queda en gitignore.
 
 ![Error trying to create a repository with 10 required_aproving_review_count](../../images/blog/images/Error.png)
 
-## Safer operations
+## Operaciones más seguras
 
-Two changes protect the repositories once created:
+Dos cambios protegen los repositorios una vez creados:
 
-- `terraform destroy` permanently deletes the GitHub repository. The README now says so explicitly, and an opt-in `lifecycle { prevent_destroy = true }` block is one uncomment away for projects that should never be deleted by accident.
-- bootstrapping a second repository no longer fights local state. Reset scripts clear `terraform.tfstate` without touching GitHub, so created repositories are kept and the tool can move on to the next one.
+- `terraform destroy` borra permanentemente el repositorio GitHub. El README ahora lo dice explícitamente, y un bloque opt-in `lifecycle { prevent_destroy = true }` queda a un uncomment para proyectos que nunca deberían borrarse por accidente.
+- arrancar un segundo repositorio ya no pelea con el state local. Los scripts de reset limpian `terraform.tfstate` sin tocar GitHub, así los repositorios creados se conservan y la herramienta puede pasar al siguiente.
 
-Smaller touches in the same spirit: feature branches auto-delete on squash-merge, the token is typed through a hidden prompt instead of landing in shell history, and issue labels carry descriptions.
+Toques menores en la misma línea: las feature branches se auto-borran al hacer squash-merge, el token se introduce con un prompt oculto en vez de acabar en el historial de la shell, y los issue labels llevan descripciones.
 
-## Smoother workflow
+## Workflow más fluido
 
-The repository now enforces the habits it preaches. Every change goes through feature branches and pull requests with signed commits. CI runs format, validation, lint, and security scans, skips itself on docs-only pushes, cancels superseded runs, and shares its Checkov exceptions through a committed config so local runs match. Dependabot opens weekly update PRs for Actions and the provider, while the Terraform version pin moved to a tested 1.14.5.
+El repositorio ahora aplica los hábitos que predica. Cada cambio pasa por feature branches y pull requests con commits firmados. CI corre formato, validación, lint y security scans, se salta a sí mismo en pushes solo de docs, cancela runs superados y comparte sus excepciones de Checkov con una config versionada para que los runs locales coincidan. Dependabot abre PRs semanales de Updates para Actions y el provider, mientras el pin de versión de Terraform pasó a una 1.14.5 probada.
 
-## What I learned
+## Qué aprendí
 
-Using the tool as its own development workflow taught me more than building it:
+Usar la herramienta como su propio workflow de desarrollo me enseñó más que construirla:
 
-- validate at the boundary: Terraform variable validation catches mistakes before any API call, which is the cheapest place to fail
-- local state means single purpose: a state file tracking one repository is simple and predictable, as long as the reset flow is documented
-- guardrails beat warnings: a commented `prevent_destroy` block does more than a paragraph telling you to be careful
-- CI should mirror local runs: shared configs (Checkov, formatting) remove the "works on my machine" gap
-- signed commits and branch protection are friction until they save you once
+- valida en el borde: la validación de variables de Terraform pilla errores antes de cualquier llamada a la API, que es el sitio más barato para fallar
+- state local significa propósito único: un state file que trackea un repositorio es simple y predecible, siempre que el flujo de reset esté documentado
+- los guardrails ganan a los avisos: un bloque `prevent_destroy` comentado hace más que un párrafo diciéndote que tengas cuidado
+- CI debe reflejar los runs locales: configs compartidas (Checkov, formato) eliminan el gap del "en mi máquina funciona"
+- los commits firmados y el branch protection son fricción hasta que te salvan una vez
 
-## Why this matters in real teams
+## Por qué esto importa en equipos reales
 
-None of these changes make repository creation faster. They make it harder to do wrong: bad inputs rejected in seconds, destructive commands flagged before they run, dependencies updated through reviewable PRs instead of silent drift. That is the difference between a script that works and a tool a team can trust.
+Ninguno de estos cambios hace la creación de repositorios más rápida. Hacen que sea más difícil hacerlo mal: inputs malos rechazados en segundos, comandos destructivos avisados antes de correr, dependencias actualizadas con PRs revisables en vez de drift silencioso. Esa es la diferencia entre un script que funciona y una herramienta en la que un equipo puede confiar.
 
-## Takeaways
+## Conclusiones
 
-The first version proved the idea; this iteration made it dependable. The pattern held up: small, explicit defaults, validated early, protected by default, automated where it counts.
+La primera versión probó la idea; esta iteración la hizo dependable. El patrón aguantó: defaults pequeños y explícitos, validados pronto, protegidos por defecto, automatizados donde cuenta.
 
-## References
+## TL;DR in English
+
+First version proved the idea; this one made it dependable: fail-fast inputs, destroy guardrails, CI mirroring local runs.
+
+## Referencias
 
 - Project repository: [https://github.com/isaiasvela/github-bootstrap](https://github.com/isaiasvela/github-bootstrap)
 - Terraform GitHub provider documentation: [https://registry.terraform.io/providers/integrations/github/latest/docs](https://registry.terraform.io/providers/integrations/github/latest/docs)

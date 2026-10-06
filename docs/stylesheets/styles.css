@@ -184,6 +184,139 @@
 .sv-post-tags .md-tag { text-decoration: none; }
 .sv-post-tags .md-tag:hover { border-color: var(--md-accent-fg-color); }
 
+/* ---------- code blocks ---------- */
+/* Convention: commands in ```bash/```console, transcript output in
+ * ```{.text .no-copy} (renders as pre.no-copy), real code tagged by
+ * language (```python, ```yaml, ...). CSS-only: no copy buttons and no
+ * syntax highlighting — only the window chrome differs per language. */
+.md-typeset pre {
+  position: relative;
+  background: #010409;
+  border: 1px solid var(--sv-border);
+  border-radius: 10px;
+  padding: 2.2rem 0.9rem 0.8rem;
+  margin: 0.8em 0;
+  overflow-x: auto;
+  transition: border-color 0.15s ease;
+}
+.md-typeset pre:hover { border-color: #3d444d; }
+/* divider under the header zone, common to every block */
+.md-typeset pre::after {
+  content: "";
+  position: absolute;
+  top: 1.85rem;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--sv-border);
+}
+.md-typeset pre > code {
+  background: transparent;
+  font-size: 0.7rem;
+  line-height: 1.55;
+  color: var(--md-default-fg-color);
+}
+
+/* ----- terminal look: untagged transcripts, shell, plain-text output ----- */
+.md-typeset pre:has(> code:is(:not([class]), .language-bash, .language-console, .language-shell, .language-sh, .language-zsh, .language-fish, .language-powershell, .language-ps1, .language-cmd, .language-bat, .language-text))::before {
+  content: "";
+  position: absolute;
+  top: 0.7rem;
+  left: 0.9rem;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background: #ff5f56;
+  box-shadow: 1rem 0 0 #ebbd2d, 2rem 0 0 #27c93f;
+}
+/* command blocks: red accent bar on the left */
+.md-typeset pre:has(> code:is(:not([class]), .language-bash, .language-console, .language-shell, .language-sh, .language-zsh, .language-fish, .language-powershell, .language-ps1, .language-cmd, .language-bat)):not(.no-copy) {
+  border-left: 3px solid var(--md-accent-fg-color);
+}
+/* per-line prompts are injected by javascripts/prompts.js as span.sv-prompt */
+.sv-prompt {
+  color: var(--sv-green);
+  font-weight: 700;
+  user-select: none;
+}
+/* output blocks: dimmer, no accent, no prompt */
+.md-typeset pre.no-copy > code { color: var(--md-default-fg-color--light); }
+
+/* ----- fused terminal: command directly followed by its output ----- */
+/* Renders both blocks as a single window: no content changes needed. */
+.md-typeset pre:has(> code:is(:not([class]), .language-bash, .language-console, .language-shell, .language-sh, .language-zsh, .language-fish, .language-powershell, .language-ps1, .language-cmd, .language-bat)):not(.no-copy):has(+ pre.no-copy) {
+  margin-bottom: 0;
+  padding-bottom: 0.25rem;
+  border-bottom: none;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.md-typeset pre:has(> code:is(:not([class]), .language-bash, .language-console, .language-shell, .language-sh, .language-zsh, .language-fish, .language-powershell, .language-ps1, .language-cmd, .language-bat)):not(.no-copy) + pre.no-copy {
+  margin-top: 0;
+  padding-top: 0.25rem;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.md-typeset pre:has(> code:is(:not([class]), .language-bash, .language-console, .language-shell, .language-sh, .language-zsh, .language-fish, .language-powershell, .language-ps1, .language-cmd, .language-bat)):not(.no-copy) + pre.no-copy::before,
+.md-typeset pre:has(> code:is(:not([class]), .language-bash, .language-console, .language-shell, .language-sh, .language-zsh, .language-fish, .language-powershell, .language-ps1, .language-cmd, .language-bat)):not(.no-copy) + pre.no-copy::after {
+  display: none;
+}
+
+/* ----- other languages: neutral block with a language label ----- */
+.md-typeset pre:has(> code.language-python)::before,
+.md-typeset pre:has(> code.language-yaml)::before,
+.md-typeset pre:has(> code.language-yml)::before,
+.md-typeset pre:has(> code.language-json)::before,
+.md-typeset pre:has(> code.language-javascript)::before,
+.md-typeset pre:has(> code.language-js)::before,
+.md-typeset pre:has(> code.language-typescript)::before,
+.md-typeset pre:has(> code.language-ts)::before,
+.md-typeset pre:has(> code.language-html)::before,
+.md-typeset pre:has(> code.language-css)::before,
+.md-typeset pre:has(> code.language-dockerfile)::before,
+.md-typeset pre:has(> code.language-sql)::before,
+.md-typeset pre:has(> code.language-toml)::before,
+.md-typeset pre:has(> code.language-ini)::before,
+.md-typeset pre:has(> code.language-go)::before,
+.md-typeset pre:has(> code.language-rust)::before,
+.md-typeset pre:has(> code.language-java)::before,
+.md-typeset pre:has(> code.language-php)::before {
+  position: absolute;
+  top: 0.55rem;
+  left: 1rem;
+  font-family: var(--md-code-font-family);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--md-accent-fg-color);
+}
+.md-typeset pre:has(> code.language-python)::before { content: "PYTHON"; }
+.md-typeset pre:has(> code.language-yaml)::before { content: "YAML"; }
+.md-typeset pre:has(> code.language-yml)::before { content: "YAML"; }
+.md-typeset pre:has(> code.language-json)::before { content: "JSON"; }
+.md-typeset pre:has(> code.language-javascript)::before { content: "JAVASCRIPT"; }
+.md-typeset pre:has(> code.language-js)::before { content: "JS"; }
+.md-typeset pre:has(> code.language-typescript)::before { content: "TYPESCRIPT"; }
+.md-typeset pre:has(> code.language-ts)::before { content: "TS"; }
+.md-typeset pre:has(> code.language-html)::before { content: "HTML"; }
+.md-typeset pre:has(> code.language-css)::before { content: "CSS"; }
+.md-typeset pre:has(> code.language-dockerfile)::before { content: "DOCKERFILE"; }
+.md-typeset pre:has(> code.language-sql)::before { content: "SQL"; }
+.md-typeset pre:has(> code.language-toml)::before { content: "TOML"; }
+.md-typeset pre:has(> code.language-ini)::before { content: "INI"; }
+.md-typeset pre:has(> code.language-go)::before { content: "GO"; }
+.md-typeset pre:has(> code.language-rust)::before { content: "RUST"; }
+.md-typeset pre:has(> code.language-java)::before { content: "JAVA"; }
+.md-typeset pre:has(> code.language-php)::before { content: "PHP"; }
+/* thin scrollbars inside code blocks */
+.md-typeset pre::-webkit-scrollbar { height: 8px; }
+.md-typeset pre::-webkit-scrollbar-thumb {
+  background: var(--sv-border);
+  border-radius: 999px;
+}
+.md-typeset pre::-webkit-scrollbar-track { background: transparent; }
+
 /* ---------- CV timeline ---------- */
 .sv-timeline { margin: 1.4rem 0; }
 .sv-tl-item {

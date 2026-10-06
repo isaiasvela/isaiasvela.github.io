@@ -1,23 +1,23 @@
 ---
 title: Weather Dashboard
-description: Frontend weather dashboard with automated CI/CD, deployment automation, and GitHub Pages delivery.
+description: Dashboard meteorológico frontend con CI/CD automatizado y despliegue en GitHub Pages.
 ---
 
-# Weather Dashboard with CI/CD
+# Weather Dashboard con CI/CD
 
-A weather dashboard backed by a disciplined delivery workflow: every change goes through lint, test, build, and automatic deployment to GitHub Pages.
+Un dashboard meteorológico respaldado por un workflow disciplinado de entrega: cada cambio pasa por lint, test, build y despliegue automático a GitHub Pages.
 
-## Problem
+## Problema
 
-Frontend projects need more than a working interface — without automation, validation and deployment become manual, error-prone chores that slow iteration and erode confidence.
+Los proyectos frontend necesitan más que una interfaz que funcione — sin automatización, la validación y el despliegue se vuelven tareas manuales y propensas a errores que frenan la iteración y erosionan la confianza.
 
-## Solution
+## Solución
 
-A responsive dashboard consuming an external weather API, wrapped in a GitHub Actions pipeline (lint → test → build → deploy → notify) publishing to Pages on every push.
+Un dashboard responsive que consume una API meteorológica externa, envuelto en un pipeline de GitHub Actions (lint → test → build → deploy → notify) que publica en Pages con cada push.
 
-## Result
+## Resultado
 
-Small app, real habits: deployment friction near zero, releases boring and predictable. Good engineering practices scale even when the application itself is modest.
+App pequeña, hábitos reales: fricción de despliegue casi cero, releases aburridas y predecibles. Las buenas prácticas de ingeniería escalan aunque la aplicación sea modesta.
 
 <div class="sv-chips" markdown="1">
 <span class="sv-chip">JavaScript</span>
@@ -26,9 +26,9 @@ Small app, real habits: deployment friction near zero, releases boring and predi
 <span class="sv-chip">GitHub Pages</span>
 </div>
 
-## Links
+## Enlaces
 
-Code and pipeline docs live in the repo (single source of truth):
+Código y docs del pipeline en el repo (fuente única de verdad, en inglés):
 
 - [Weather Dashboard](https://github.com/isaiasvela/weather-dashboard)
 - [Live app](https://isaiasvela.github.io/weather-dashboard/)

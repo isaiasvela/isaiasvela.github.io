@@ -1,5 +1,5 @@
 site_name: Isaías Vela
-site_description: DevSecOps, Cloud Security and Kubernetes Security engineer portfolio.
+site_description: Portfolio de ingeniería en DevSecOps, Cloud Security y Kubernetes Security.
 site_author: Isaías Vela
 site_url: https://isaiasvela.github.io/
 repo_url: https://github.com/isaiasvela
@@ -39,6 +39,7 @@ extra_css:
 
 extra_javascript:
   - javascripts/goatcounter.js
+  - javascripts/prompts.js
 
 markdown_extensions:
   - admonition
@@ -58,20 +59,21 @@ extra:
       link: https://www.linkedin.com/in/isa%C3%ADas-vela-sotil-b436431a4/
 
 nav:
-  - Home: index.md
+  - Inicio: index.md
   - CV: cv.md
-  - Projects:
-      - Overview: projects/index.md
+  - Proyectos:
+      - Vista general: projects/index.md
       - Kubernetes Security Lab: projects/kubernetes-security-lab.md
       - GitHub Bootstrap: projects/github-bootstrap.md
       - TimeTrack: projects/timetrack.md
       - Weather Dashboard: projects/weather-dashboard.md
-  - Research:
-      - Overview: research/index.md
+  - Writeups:
+      - Vista general: writeups/index.md
       - Writeups:
-          - First Hacking: research/writeups/first-hacking.md
-          - Injection: research/writeups/injection.md
-          - Trust: research/writeups/trust.md
-          - Obsession: research/writeups/obsession.md
+          - First Hacking: writeups/writeups/first-hacking.md
+          - Injection: writeups/writeups/injection.md
+          - Trust: writeups/writeups/trust.md
+          - Obsession: writeups/writeups/obsession.md
+          - Acme: writeups/writeups/acme.md
   - Blog: blog/index.md
   - Tags: tags.md

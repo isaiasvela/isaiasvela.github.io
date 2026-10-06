@@ -1,23 +1,23 @@
 ---
 title: GitHub Bootstrap
-description: A Terraform-based GitHub repository bootstrap that automates secure project setup and governance.
+description: Bootstrap de repositorios GitHub con Terraform que automatiza un setup seguro y la gobernanza del proyecto.
 ---
 
 # GitHub Bootstrap
 
-A Terraform-driven repository bootstrap that creates consistent, secure, and production-ready GitHub projects with the right defaults from day one.
+Un bootstrap de repositorios con Terraform que crea proyectos GitHub consistentes, seguros y listos para producción con los defaults correctos desde el día uno.
 
-## Problem
+## Problema
 
-Starting a new project means repeating the same setup: repository, branch protection, labels, review rules, baseline security. Done by hand it becomes inconsistent, slow, and prone to security drift.
+Empezar un proyecto nuevo significa repetir el mismo setup: repositorio, branch protection, labels, reglas de revisión, baseline de seguridad. Hecho a mano se vuelve inconsistente, lento y propenso a security drift.
 
-## Solution
+## Solución
 
-A reusable Terraform workflow on the GitHub provider that provisions repositories declaratively: initialization from a template, `main`/`develop` branch protection, issue labels, and validated inputs that fail fast instead of producing deep provider errors. Later iterations added destroy guardrails and a CI workflow to match.
+Un workflow reutilizable de Terraform sobre el provider de GitHub que provisiona repositorios de forma declarativa: inicialización desde plantilla, branch protection en `main`/`develop`, issue labels e inputs validados que fallan rápido en vez de producir errores crípticos del provider. Iteraciones posteriores añadieron guardrails de destroy y un workflow de CI a juego.
 
-## Result
+## Resultado
 
-Repository creation went from manual checklist to repeatable tool: validated early, protected by default, automated where it counts. I wrote up the evolution in two blog posts: [part 1](../blog/posts/github-repository-bootstrap.md) and [part 2](../blog/posts/github-repository-bootstrap-part2.md).
+La creación de repositorios pasó de checklist manual a herramienta repetible: validada pronto, protegida por defecto, automatizada donde cuenta. Conté la evolución en dos posts del blog: [parte 1](../blog/posts/github-repository-bootstrap.md) y [parte 2](../blog/posts/github-repository-bootstrap-part2.md).
 
 <div class="sv-chips" markdown="1">
 <span class="sv-chip">Terraform</span>
@@ -26,8 +26,8 @@ Repository creation went from manual checklist to repeatable tool: validated ear
 <span class="sv-chip">IaC</span>
 </div>
 
-## Repository
+## Repositorio
 
-Setup, inputs, and usage docs live in the repo (single source of truth):
+Setup, inputs y docs de uso en el repo (fuente única de verdad, en inglés):
 
 - [GitHub Bootstrap](https://github.com/isaiasvela/github-bootstrap)

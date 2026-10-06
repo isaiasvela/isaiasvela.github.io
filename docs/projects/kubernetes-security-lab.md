@@ -1,25 +1,25 @@
 ---
 title: Kubernetes Security Lab
-description: Kubernetes runtime security lab for adversary emulation, Falco detection engineering, and cloud-native threat validation.
+description: Laboratorio de seguridad en runtime en Kubernetes para emulación de adversario, ingeniería de detección con Falco y validación de amenazas cloud-native.
 ---
 
 # Kubernetes Runtime Security Lab
 
-> Bachelor's Final Thesis — Universitat Politècnica de Catalunya (UPC)
+> Trabajo de Fin de Grado — Universitat Politècnica de Catalunya (UPC)
 
-A Kubernetes security laboratory that measures how well a real cluster detects malicious activity at runtime — and improves it with detection engineering. Falco watches workloads while MITRE CALDERA attacks them, before and after custom rule tuning.
+Un laboratorio de seguridad en Kubernetes que mide cómo de bien detecta un clúster real la actividad maliciosa en runtime — y lo mejora con ingeniería de detección. Falco vigila los workloads mientras MITRE CALDERA los ataca, antes y después de afinar reglas personalizadas.
 
-## Problem
+## Problema
 
-Kubernetes deployments often look secure while exposing critical runtime risks: compromised workloads, weak process visibility, lateral movement. Configuration checks alone can't tell you whether live adversary behavior would be detected.
+Muchos despliegues de Kubernetes parecen seguros pero exponen riesgos críticos en runtime: workloads comprometidos, poca visibilidad de procesos, movimiento lateral. Solo con checks de configuración no sabes si el comportamiento real de un atacante sería detectado.
 
-## Solution
+## Solución
 
-A reproducible lab combining an observation stack (Falco, Falcosidekick, Grafana, Loki) with automated adversary emulation (MITRE CALDERA sandcat agent inside the cluster). Default Falco rules were evaluated against controlled attack scenarios, gaps identified, and custom behavior-based rules written and re-validated.
+Un laboratorio reproducible que combina un stack de observación (Falco, Falcosidekick, Grafana, Loki) con emulación automatizada de adversario (agente sandcat de MITRE CALDERA dentro del clúster). Se evaluaron las reglas por defecto de Falco contra escenarios controlados, se identificaron gaps y se escribieron reglas personalizadas basadas en comportamiento, revalidadas después.
 
-## Result
+## Resultado
 
-Clear, measured difference between generic defaults and deliberate detection engineering: fewer blind spots, better signal quality. Alert quality matters more than alert volume — and posture only improves when attack simulation and defense are done together.
+Diferencia clara y medida entre usar defaults genéricos y hacer ingeniería de detección deliberada: menos puntos ciegos, mejor calidad de señal. La calidad de las alertas importa más que el volumen — y la postura solo mejora cuando la simulación de ataque y la defensa se hacen juntas.
 
 <div class="sv-chips" markdown="1">
 <span class="sv-chip">Kubernetes</span>
@@ -30,9 +30,9 @@ Clear, measured difference between generic defaults and deliberate detection eng
 <span class="sv-chip">Bash</span>
 </div>
 
-## Repositories
+## Repositorios
 
-Full docs, manifests, and rules live in the repos (single source of truth):
+Docs completas, manifiestos y reglas en los repos (fuente única de verdad, en inglés):
 
 - 🧪 [Laboratory Infrastructure](https://github.com/isaiasvela/tfg_lab)
 - 🛡️ [Falco Custom Rules](https://github.com/isaiasvela/Falco_custom_rules)

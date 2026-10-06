@@ -1,6 +1,6 @@
 ---
-title: Home
-description: DevSecOps and Cloud Security engineer portfolio focused on Kubernetes security, automation, and cloud-native infrastructure.
+title: Inicio
+description: Portfolio de ingeniería DevSecOps y Cloud Security centrado en seguridad en Kubernetes, automatización e infraestructura cloud-native.
 ---
 
 <div class="sv-terminal" markdown="1">
@@ -8,19 +8,19 @@ description: DevSecOps and Cloud Security engineer portfolio focused on Kubernet
 <div class="sv-terminal-body" markdown="1">
 <span class="p">visitor@isaiasvela</span>:~$ whoami
 
-Isaías Vela — Computer Engineer focused on DevSecOps, Kubernetes security, cloud security, and infrastructure automation.
+Isaías Vela — Ingeniero informático centrado en DevSecOps, seguridad en Kubernetes, cloud security y automatización de infraestructura.
 
 <span class="p">visitor@isaiasvela</span>:~$ cat mission.txt
 
-I build, automate and secure cloud-native infrastructure. <span class="sv-cursor"></span>
+Construyo, automatizo y aseguro infraestructura cloud-native. <span class="sv-cursor"></span>
 </div>
 </div>
 
-## About me
+## Sobre mí
 
-My focus is on building secure systems that combine software engineering, automation, and operational resilience. I work across DevSecOps, cloud security, CI/CD hardening, and Infrastructure as Code to help teams move faster without compromising security.
+Me dedico a construir sistemas seguros que combinan ingeniería de software, automatización y resiliencia operativa. Trabajo en DevSecOps, cloud security, hardening de CI/CD e Infrastructure as Code para ayudar a los equipos a moverse rápido sin comprometer la seguridad.
 
-### Areas of expertise
+### Áreas de experiencia
 
 <div class="sv-chips" markdown="1">
 <span class="sv-chip">DevSecOps</span>
@@ -31,71 +31,71 @@ My focus is on building secure systems that combine software engineering, automa
 <span class="sv-chip">Infrastructure as Code</span>
 </div>
 
-### Current focus
+### Enfoque actual
 
-I am actively exploring opportunities in:
+Estoy buscando activamente oportunidades como:
 
 - DevSecOps Engineer
 - Cloud Security Engineer
 - Cybersecurity Engineer
 
-## Featured Projects
+## Proyectos destacados
 
 <div class="sv-grid" markdown="1">
 <div class="sv-card" markdown="1"><div class="sv-card-body" markdown="1">
 ### [Kubernetes Security Lab](projects/kubernetes-security-lab.md)
 
-Hands-on security lab focused on Kubernetes hardening, runtime detection, and attack simulation.
+Laboratorio de seguridad hands-on centrado en hardening de Kubernetes, detección en runtime y simulación de ataques.
 </div></div>
 <div class="sv-card" markdown="1"><div class="sv-card-body" markdown="1">
 ### [GitHub Bootstrap](projects/github-bootstrap.md)
 
-Reusable engineering automation to bootstrap secure repositories and developer workflows.
+Automatización reutilizable para crear repositorios seguros y flujos de trabajo de desarrollo.
 </div></div>
 <div class="sv-card" markdown="1"><div class="sv-card-body" markdown="1">
 ### [TimeTrack](projects/timetrack.md)
 
-Work-time tracking application built to support productivity and operational visibility.
+Aplicación de registro de jornada para dar soporte a la productividad y la visibilidad operativa.
 </div></div>
 </div>
 
-## Latest Security Research
+## Últimos writeups de seguridad
 
-- [Trust](research/writeups/trust.md) — An offensive lab with analysis of confidence limits and security configuration errors.
-- [Obsession](research/writeups/obsession.md) — An offensive security lab focused on persistence and lateral movement patterns.
+- [Trust](writeups/writeups/trust.md) — Un laboratorio ofensivo sobre confianza mal puesta y misconfigurations de seguridad.
+- [Obsession](writeups/writeups/obsession.md) — Un laboratorio de seguridad ofensiva centrado en persistencia y patrones de movimiento lateral.
 
-## Latest Posts
+## Últimas publicaciones
 
 <div class="sv-grid" markdown="1">
 <div class="sv-card" markdown="1">
-[![Terraform GitHub repository bootstrap](images/blog/thumbnails/GithubBootstrap2.png)](blog/posts/github-repository-bootstrap-part2.md)<div class="sv-card-body" markdown="1">
+[![Bootstrap de repositorios GitHub con Terraform](images/blog/thumbnails/GithubBootstrap2.png)](blog/posts/github-repository-bootstrap-part2.md)<div class="sv-card-body" markdown="1">
 <div class="sv-date">30 September 2026</div>
-### GitHub repository bootstrap, part 2: from demo to dependable
+### Bootstrap de repositorios GitHub, parte 2: de demo a dependable
 
-From working demo to dependable tool: fail-fast inputs, destroy guardrails, and a workflow to match.
+De demo funcional a herramienta dependable: inputs fail-fast, guardrails de destroy y un workflow a juego.
 
-[Read more →](blog/posts/github-repository-bootstrap-part2.md)
+[Leer más →](blog/posts/github-repository-bootstrap-part2.md)
 </div>
 </div>
 <div class="sv-card" markdown="1">
-[![Terraform GitHub repository bootstrap](images/blog/thumbnails/GithubBootstrap.png)](blog/posts/github-repository-bootstrap.md)<div class="sv-card-body" markdown="1">
+[![Bootstrap de repositorios GitHub con Terraform](images/blog/thumbnails/GithubBootstrap.png)](blog/posts/github-repository-bootstrap.md)<div class="sv-card-body" markdown="1">
 <div class="sv-date">24 August 2026</div>
-### GitHub repository bootstrap
+### Bootstrap de repositorios GitHub con Terraform
 
-A practical guide to automating the creation of secure GitHub repositories with Terraform and reusable defaults.
+Guía práctica para automatizar la creación de repositorios GitHub seguros con Terraform y defaults reutilizables.
 
-[Read more →](blog/posts/github-repository-bootstrap.md)
+[Leer más →](blog/posts/github-repository-bootstrap.md)
 </div>
 </div>
 </div>
 
-## Selected Focus Areas
+## Áreas de interés
 
-- DevSecOps and secure engineering
-- Cloud and Kubernetes security
-- Secure CI/CD and policy enforcement
-- Automation and IaC for resilient infrastructure
+- DevSecOps e ingeniería segura
+- Cloud y seguridad en Kubernetes
+- CI/CD seguro y policy enforcement
+- Automatización e IaC para infraestructuras resilientes
 
 ---
 
-> This portfolio reflects hands-on security engineering, secure architecture, and the continuous improvement of cloud-native systems.
+> Este portfolio refleja ingeniería de seguridad práctica, arquitectura segura y mejora continua de sistemas cloud-native.

@@ -29,18 +29,24 @@ Walkthroughs de laboratorios ofensivos desde la práctica hands-on: máquinas vu
 ### [First Hacking](writeups/first-hacking.md)
 
 Primer foothold: desplegar el laboratorio y conseguir el acceso inicial.
+
+[Ver writeup →](writeups/first-hacking.md)
 </div></div>
 <div class="sv-card" markdown="1" data-difficulty="super easy" data-concepts="sqli nmap ssh privilege escalation setuid env"><div class="sv-card-body" markdown="1">
 <div class="sv-date sv-date--supereasy">Super easy</div>
 ### [Injection](writeups/injection.md)
 
 Explotar un fallo de inyección para salir y escalar.
+
+[Ver writeup →](writeups/injection.md)
 </div></div>
 <div class="sv-card" markdown="1" data-difficulty="super easy" data-concepts="gobuster hydra ssh privilege escalation vim sudo"><div class="sv-card-body" markdown="1">
 <div class="sv-date sv-date--supereasy">Super easy</div>
 ### [Trust](writeups/trust.md)
 
 Un laboratorio ofensivo sobre confianza mal puesta y misconfigurations.
+
+[Ver writeup →](writeups/trust.md)
 </div></div>
 <div class="sv-card" markdown="1" data-difficulty="super easy" data-concepts="ftp hydra nmap ssh privilege escalation vim sudo"><div class="sv-card-body" markdown="1">
 <div class="sv-date sv-date--supereasy">Super easy</div>
@@ -48,12 +54,14 @@ Un laboratorio ofensivo sobre confianza mal puesta y misconfigurations.
 
 FTP anonymous, fuerza bruta SSH y escalada con vim.
 
-</div></div>
+[Ver writeup →](writeups/obsession.md)</div></div>
 <div class="sv-card" markdown="1" data-difficulty="super easy" data-concepts="nmap ssh privilege escalation setuid banner"><div class="sv-card-body" markdown="1">
 <div class="sv-date sv-date--supereasy">Super easy</div>
 ### [Acme](writeups/acme.md)
 
 De recon a root: banner SSH mal configurado y escalada con setuid.
+
+[Ver writeup →](writeups/acme.md)
 </div></div>
 </div>
 </div>

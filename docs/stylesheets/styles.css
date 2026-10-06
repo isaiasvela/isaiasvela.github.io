@@ -127,6 +127,16 @@
 .sv-date--medium { color: #ebbd2d; }
 .sv-date--hard { color: #f0883e; }
 .sv-date--insane { color: #bc8cff; }
+/* neutral kicker for cards without date/difficulty (e.g. projects) */
+.sv-kicker {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--md-default-fg-color--light);
+  margin-bottom: 0.5rem;
+  font-family: var(--md-code-font-family);
+}
 
 /* ---------- blog plugin tuning ---------- */
 .md-post--excerpt .md-post__content h2 a {

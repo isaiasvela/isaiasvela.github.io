@@ -21,8 +21,13 @@
       var shown = 0;
       cards.forEach(function (card) {
         var okLevel = level === "all" || card.dataset.difficulty === level;
-        var hay =
-          (card.textContent + " " + (card.dataset.concepts || "")).toLowerCase();
+        var bits = [];
+        card.querySelectorAll("h3, p").forEach(function (el) {
+          if (!el.querySelector("a")) bits.push(el.textContent);
+        });
+        bits.push(card.dataset.difficulty || "");
+        bits.push(card.dataset.concepts || "");
+        var hay = bits.join(" ").toLowerCase();
         var okText = !needle || hay.indexOf(needle) !== -1;
         var show = okLevel && okText;
         card.style.display = show ? "" : "none";

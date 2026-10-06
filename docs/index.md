@@ -45,19 +45,28 @@ Estoy buscando activamente oportunidades como:
 
 <div class="sv-grid" markdown="1">
 <div class="sv-card" markdown="1"><div class="sv-card-body" markdown="1">
+<div class="sv-kicker">Kubernetes</div>
 ### [Kubernetes Security Lab](projects/kubernetes-security-lab.md)
 
 Laboratorio de seguridad hands-on centrado en hardening de Kubernetes, detección en runtime y simulación de ataques.
+
+[Ver proyecto →](projects/kubernetes-security-lab.md)
 </div></div>
 <div class="sv-card" markdown="1"><div class="sv-card-body" markdown="1">
+<div class="sv-kicker">Terraform</div>
 ### [GitHub Bootstrap](projects/github-bootstrap.md)
 
 Automatización reutilizable para crear repositorios seguros y flujos de trabajo de desarrollo.
+
+[Ver proyecto →](projects/github-bootstrap.md)
 </div></div>
 <div class="sv-card" markdown="1"><div class="sv-card-body" markdown="1">
+<div class="sv-kicker">Next.js</div>
 ### [TimeTrack](projects/timetrack.md)
 
 Aplicación de registro de jornada para dar soporte a la productividad y la visibilidad operativa.
+
+[Ver proyecto →](projects/timetrack.md)
 </div></div>
 </div>
 
@@ -71,18 +80,24 @@ Aplicación de registro de jornada para dar soporte a la productividad y la visi
 ### [Acme](writeups/writeups/acme.md)
 
 De recon a root: banner SSH mal configurado y escalada con setuid.
+
+[Ver writeup →](writeups/writeups/acme.md)
 </div></div>
 <div class="sv-card" markdown="1"><div class="sv-card-body" markdown="1">
 <div class="sv-date sv-date--supereasy">Super easy</div>
 ### [Obsession](writeups/writeups/obsession.md)
 
 FTP anonymous, fuerza bruta SSH y escalada con vim.
+
+[Ver writeup →](writeups/writeups/obsession.md)
 </div></div>
 <div class="sv-card" markdown="1"><div class="sv-card-body" markdown="1">
 <div class="sv-date sv-date--supereasy">Super easy</div>
 ### [Trust](writeups/writeups/trust.md)
 
 Un laboratorio ofensivo sobre confianza mal puesta y misconfigurations.
+
+[Ver writeup →](writeups/writeups/trust.md)
 </div></div>
 </div>
 
@@ -93,7 +108,7 @@ Un laboratorio ofensivo sobre confianza mal puesta y misconfigurations.
 <div class="sv-grid" markdown="1">
 <div class="sv-card" markdown="1">
 [![Bootstrap de repositorios GitHub con Terraform](images/blog/thumbnails/GithubBootstrap2.png)](blog/posts/github-repository-bootstrap-part2.md)<div class="sv-card-body" markdown="1">
-<div class="sv-date">30 September 2026</div>
+<div class="sv-date">30 de septiembre de 2026</div>
 ### Bootstrap de repositorios GitHub, parte 2: de demo a dependable
 
 De demo funcional a herramienta dependable: inputs fail-fast, guardrails de destroy y un workflow a juego.
@@ -103,7 +118,7 @@ De demo funcional a herramienta dependable: inputs fail-fast, guardrails de dest
 </div>
 <div class="sv-card" markdown="1">
 [![Bootstrap de repositorios GitHub con Terraform](images/blog/thumbnails/GithubBootstrap.png)](blog/posts/github-repository-bootstrap.md)<div class="sv-card-body" markdown="1">
-<div class="sv-date">24 August 2026</div>
+<div class="sv-date">24 de agosto de 2026</div>
 ### Bootstrap de repositorios GitHub con Terraform
 
 Guía práctica para automatizar la creación de repositorios GitHub seguros con Terraform y defaults reutilizables.

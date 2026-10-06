@@ -1,57 +1,42 @@
 ---
-title: Writeup Title
-description: Security writeups writeup covering a technical assessment and findings.
+title: Nombre Máquina
+description: De recon a root en una línea, en español.
 tags:
-  - Web Security
-  - Exploit
-  - Enumeration
+  - Super easy
+  - Concepto1
+  - Concepto2
 ---
 
-# Writeup Title
+# Writeup Nombre Máquina
 
-> Difficulty: Medium
-> Tags: Web Security, Enumeration, Exploitation
-> Reading time: 6 minutes
+**Difficulty:** Super easy<br>
+**Dockerlabs link:** [https://dockerlabs.es/](https://dockerlabs.es/)
 
-## Introduction
+## Fase 0 - Preparación del entorno
 
-Provide the high-level context, target, and objective of the exercise.
+Cómo se despliega la máquina. Comando en bloque `bash`, salida en bloque output justo detrás (se fusionan en una sola terminal):
 
-## Enumeration
+```bash
+sudo ./auto_deploy.sh maquina.tar
+```
 
-Describe how the target was discovered and mapped.
+```{.text .no-copy}
+Máquina desplegada, su dirección IP es --> 172.17.0.2
+```
 
-- Hosts
-- Services
-- Endpoints
-- Technologies
-- Misconfigurations
+## Fase 1 - Recon
 
-## Exploitation
+Escaneos con nmap: primero puertos abiertos, luego servicios y versiones.
 
-Explain the actual attack path and vulnerability exploitation.
+## Fase 2 - Explotación
 
-- Payloads used
-- Steps taken
-- Observed behavior
-- Impact
+Cómo se consigue el acceso inicial, paso a paso.
 
-## Privilege Escalation
+## Fase 3 - Escalada de privilegios
 
-Describe any escalation path, post-exploitation activity, or access expansion.
+Cómo se llega a root.
 
-## Lessons learned
-
-- Lesson 1
-- Lesson 2
-- Lesson 3
-
-## Tools used
-
-- Tool 1
-- Tool 2
-- Tool 3
-
-## Final thoughts
-
-Summarize the main takeaway and the security impact.
+## Lecciones aprendidas
+1. Lección 1 con **herramienta**
+2. Lección 2
+3. Lección 3

@@ -1,25 +1,25 @@
 ---
-title: Project Name
-description: One-line value proposition of the project.
+title: Nombre Proyecto
+description: Propuesta de valor del proyecto en una línea.
 ---
 
-# Project Name
+# Nombre Proyecto
 
-One-paragraph pitch: what it is and why it matters.
+Un párrafo pitch: qué es y por qué importa.
 
-## Problem
+## Problema
 
-The challenge or pain point, in 2-4 lines. No setup instructions here.
+El reto o pain point, en 2-4 líneas. Sin instrucciones de instalación aquí.
 
-## Solution
+## Solución
 
-The approach and what was built, in 2-5 lines. No file trees, inputs, or usage docs here.
+El enfoque y qué se construyó, en 2-5 líneas. Sin árboles de ficheros, inputs ni docs de uso aquí.
 
-## Result
+## Resultado
 
-Outcomes, lessons, or what the project proved. Link related blog posts if they exist:
+Resultados, lecciones o qué demostró el proyecto. Enlaza posts relacionados si existen:
 
-- [Related post](../blog/posts/<slug>.md)
+- [Post relacionado](../blog/posts/<slug>.md)
 
 <div class="sv-chips" markdown="1">
 <span class="sv-chip">Tech 1</span>
@@ -27,8 +27,8 @@ Outcomes, lessons, or what the project proved. Link related blog posts if they e
 <span class="sv-chip">Tech 3</span>
 </div>
 
-## Repository
+## Repositorio
 
-Setup, inputs, and usage docs live in the repo (single source of truth — never duplicate them here):
+Setup, inputs y docs de uso en el repo (fuente única de verdad — nunca duplicarlos aquí):
 
-- [Project Name](https://github.com/your-user/project-name)
+- [Nombre Proyecto](https://github.com/isaiasvela/<slug>)

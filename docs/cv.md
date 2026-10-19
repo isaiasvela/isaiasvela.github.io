@@ -5,11 +5,19 @@ description: Perfil profesional y resumen de experiencia de Isaías Vela.
 
 # CV
 
-Ingeniero informático con especial interés en ciberseguridad, DevSecOps y protección de infraestructura cloud-native. Me motiva el diseño e implementación de entornos seguros, la identificación de vulnerabilidades y la mejora continua de la postura de seguridad de las organizaciones.
+Ingeniero informático con mención en tecnologías de la información. Mi base está en DevSecOps, cloud security y automatización de infraestructura, y ahora me especializo en ingeniería de datos, bases de grafos (Neo4j) e inteligencia artificial.
 
 ## Experiencia
 
 <div class="sv-timeline" markdown="1">
+<div class="sv-tl-item" markdown="1">
+<div class="sv-tl-date">Nov 2026 — Presente</div>
+<div class="sv-tl-body" markdown="1">
+**Data Engineer** — Veltech AI
+
+- Ingeniería de datos, bases de grafos con Neo4j e IA
+</div>
+</div>
 <div class="sv-tl-item" markdown="1">
 <div class="sv-tl-date">Feb 2025 — Ago 2025</div>
 <div class="sv-tl-body" markdown="1">
@@ -56,6 +64,11 @@ Ingeniero informático con especial interés en ciberseguridad, DevSecOps y prot
 ## Stack
 
 <div class="sv-chips" markdown="1">
+<span class="sv-chip">Neo4j</span>
+<span class="sv-chip">Cypher</span>
+<span class="sv-chip">Graph Databases</span>
+<span class="sv-chip">Data Engineering</span>
+<span class="sv-chip">IA / RAG</span>
 <span class="sv-chip">Kubernetes</span>
 <span class="sv-chip">Docker</span>
 <span class="sv-chip">AWS</span>
@@ -64,11 +77,10 @@ Ingeniero informático con especial interés en ciberseguridad, DevSecOps y prot
 <span class="sv-chip">Python</span>
 <span class="sv-chip">Bash</span>
 <span class="sv-chip">GitHub Actions</span>
-<span class="sv-chip">Falco</span>
-<span class="sv-chip">Burp Suite</span>
-<span class="sv-chip">Nmap</span>
 </div>
 
+- Ingeniería de datos, modelado de grafos y consultas con Cypher en Neo4j
+- Integración de bases de grafos con flujos de IA y RAG
 - Pipelines de CI/CD seguros y automatización que equilibra velocidad y reducción de riesgo
 - Detección de misconfigurations en cloud, revisión de IAM y diseño de mínimo privilegio
 - Hardening de Kubernetes, policy enforcement y detección en runtime
@@ -86,4 +98,4 @@ Ingeniero informático con especial interés en ciberseguridad, DevSecOps y prot
 
 ## Objetivo
 
-Contribuir en equipos de ingeniería que construyen plataformas cloud-native seguras, fiables y escalables.
+Contribuir en equipos que construyen plataformas de datos con grafos e IA, aplicando una base sólida de ingeniería segura y automatización.

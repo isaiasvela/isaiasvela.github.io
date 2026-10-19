@@ -1,5 +1,5 @@
 site_name: Isaías Vela
-site_description: Portfolio de ingeniería en DevSecOps, Cloud Security y Kubernetes Security.
+site_description: Portfolio de ingeniería informática centrado en datos, bases de grafos (Neo4j), IA y DevSecOps.
 site_author: Isaías Vela
 site_url: https://isaiasvela.github.io/
 repo_url: https://github.com/isaiasvela
@@ -65,17 +65,11 @@ nav:
   - CV: cv.md
   - Proyectos:
       - Vista general: projects/index.md
-      - Kubernetes Security Lab: projects/kubernetes-security-lab.md
-      - GitHub Bootstrap: projects/github-bootstrap.md
-      - TimeTrack: projects/timetrack.md
-      - Weather Dashboard: projects/weather-dashboard.md
-  - Writeups:
-      - Vista general: writeups/index.md
-      - Writeups:
-          - First Hacking: writeups/writeups/first-hacking.md
-          - Injection: writeups/writeups/injection.md
-          - Trust: writeups/writeups/trust.md
-          - Obsession: writeups/writeups/obsession.md
-          - Acme: writeups/writeups/acme.md
+      - Seguridad:
+          - Writeups: writeups/index.md
+          - Kubernetes Security Lab: projects/kubernetes-security-lab.md
+          - GitHub Bootstrap: projects/github-bootstrap.md
+          - TimeTrack: projects/timetrack.md
+          - Weather Dashboard: projects/weather-dashboard.md
   - Blog: blog/index.md
   - Tags: tags.md

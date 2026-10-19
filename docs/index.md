@@ -1,6 +1,6 @@
 ---
 title: Inicio
-description: Portfolio de ingeniería DevSecOps y Cloud Security centrado en seguridad en Kubernetes, automatización e infraestructura cloud-native.
+description: Portfolio de ingeniería informática centrado en datos, bases de grafos (Neo4j), IA y DevSecOps.
 ---
 
 <div class="sv-terminal" markdown="1">
@@ -8,17 +8,17 @@ description: Portfolio de ingeniería DevSecOps y Cloud Security centrado en seg
 <div class="sv-terminal-body" markdown="1">
 <span class="p">visitor@isaiasvela</span>:~$ whoami
 
-Isaías Vela — Ingeniero informático centrado en DevSecOps, seguridad en Kubernetes, cloud security y automatización de infraestructura.
+Isaías Vela — Ingeniero informático con base en DevSecOps y cloud, ahora enfocado en ingeniería de datos, bases de grafos (Neo4j) e IA.
 
 <span class="p">visitor@isaiasvela</span>:~$ cat mission.txt
 
-Construyo, automatizo y aseguro infraestructura cloud-native. <span class="sv-cursor"></span>
+Construyo sistemas que conectan datos, personas y tecnología. <span class="sv-cursor"></span>
 </div>
 </div>
 
 ## Sobre mí
 
-Me dedico a construir sistemas seguros que combinan ingeniería de software, automatización y resiliencia operativa. Trabajo en DevSecOps, cloud security, hardening de CI/CD e Infrastructure as Code para ayudar a los equipos a moverse rápido sin comprometer la seguridad.
+Soy ingeniero informático con mención en tecnologías de la información. Mi base está en DevSecOps, cloud security y automatización de infraestructura, y ahora estoy profundizando en ingeniería de datos, bases de grafos con Neo4j y su relación con la inteligencia artificial.
 
 ### Áreas de experiencia
 
@@ -26,18 +26,20 @@ Me dedico a construir sistemas seguros que combinan ingeniería de software, aut
 <span class="sv-chip">DevSecOps</span>
 <span class="sv-chip">Cloud Security</span>
 <span class="sv-chip">Kubernetes Security</span>
-<span class="sv-chip">Secure CI/CD</span>
-<span class="sv-chip">Security Automation</span>
-<span class="sv-chip">Infrastructure as Code</span>
+<span class="sv-chip">Data Engineering</span>
+<span class="sv-chip">Neo4j</span>
+<span class="sv-chip">Graph Databases</span>
+<span class="sv-chip">Cypher</span>
+<span class="sv-chip">IA / RAG</span>
 </div>
 
 ### Enfoque actual
 
-Estoy buscando activamente oportunidades como:
+Estoy explorando oportunidades como:
 
-- DevSecOps Engineer
-- Cloud Security Engineer
-- Cybersecurity Engineer
+- Data Engineer
+- Graph Database Engineer
+- AI Engineer
 
 [Ver CV completo →](cv.md)
 

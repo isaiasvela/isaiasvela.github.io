@@ -15,6 +15,9 @@ Una forma práctica de automatizar la creación de repositorios GitHub seguros c
 
 <!-- more -->
 
+!!! summary "TL;DR (English)"
+	Automated GitHub repository creation with Terraform: consistent defaults, less manual setup, security from day one.
+
 ## Contexto
 
 GitHub se ha convertido en la plataforma estándar para colaborar en software. Da a los equipos una forma sencilla de gestionar el versionado, revisar código y compartir trabajo entre proyectos. Sin embargo, crear repositorios a mano suele producir inconsistencias: la configuración de la rama por defecto difiere, los permisos no siempre están alineados con los estándares de la organización y los controles de seguridad a menudo faltan desde el principio.
@@ -78,10 +81,6 @@ Este proyecto reforzó algo que considero importante en ingeniería de software:
 Usar Terraform para el bootstrap de repositorios GitHub me da una forma repetible, transparente y escalable de crear bases de proyecto. Elimina las adivinanzas del setup inicial y convierte la creación de repositorios en un proceso predecible.
 
 Para mí, fue un gran ejemplo de cómo una automatización simple puede mejorar la developer experience, reducir errores y crear un entorno técnico más consistente.
-
-## TL;DR in English
-
-Automated GitHub repository creation with Terraform: consistent defaults, less manual setup, security from day one.
 
 ## Referencias
 

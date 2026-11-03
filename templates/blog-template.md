@@ -14,13 +14,12 @@ Párrafo intro. Todo lo que quede por encima de `<!-- more -->` se usa de extrac
 
 <!-- more -->
 
+!!! summary "TL;DR in English"
+    3-4 líneas en inglés resumiendo el post.
+
 ## Contexto
 
 ...
-
-## TL;DR in English
-
-3-4 líneas en inglés resumiendo el post.
 
 ## Referencias
 

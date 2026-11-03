@@ -15,6 +15,9 @@ Inputs más seguros, operaciones más seguras: qué cambió desde la primera ver
 
 <!-- more -->
 
+!!! summary "TL;DR (English)"
+	First version proved the idea; this one made it dependable: fail-fast inputs, destroy guardrails, CI mirroring local runs.
+
 ## Contexto
 
 En el [primer post](./github-repository-bootstrap.md), describí un bootstrap con Terraform que crea repositorios GitHub con defaults consistentes. Desde entonces lo he usado de verdad, y el uso real expuso cada aspereza: errores crípticos del provider con inputs malos, ningún punto de partida para la configuración, un comando `destroy` a un typo de borrar un repositorio, y un pipeline de CI probando una versión desactualizada de Terraform.
@@ -64,10 +67,6 @@ Ninguno de estos cambios hace la creación de repositorios más rápida. Hacen q
 ## Conclusiones
 
 La primera versión probó la idea; esta iteración la hizo dependable. El patrón aguantó: defaults pequeños y explícitos, validados pronto, protegidos por defecto, automatizados donde cuenta.
-
-## TL;DR in English
-
-First version proved the idea; this one made it dependable: fail-fast inputs, destroy guardrails, CI mirroring local runs.
 
 ## Referencias
 

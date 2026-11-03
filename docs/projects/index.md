@@ -10,7 +10,7 @@ Trabajo de ingeniería en torno a despliegue seguro, infraestructura cloud-nativ
 <div class="sv-grid" markdown="1">
 <div class="sv-card" markdown="1"><div class="sv-card-body" markdown="1">
 <div class="sv-kicker">Kubernetes</div>
-### [Kubernetes Security Lab](kubernetes-security-lab.md)
+<div class="sv-card-title" markdown="1">[Kubernetes Security Lab](kubernetes-security-lab.md)</div>
 
 TFG: detección en runtime con Falco validada con emulación de adversario MITRE CALDERA.
 
@@ -18,7 +18,7 @@ TFG: detección en runtime con Falco validada con emulación de adversario MITRE
 </div></div>
 <div class="sv-card" markdown="1"><div class="sv-card-body" markdown="1">
 <div class="sv-kicker">Terraform</div>
-### [GitHub Bootstrap](github-bootstrap.md)
+<div class="sv-card-title" markdown="1">[GitHub Bootstrap](github-bootstrap.md)</div>
 
 Automatización con Terraform para una creación de repositorios GitHub segura y repetible.
 
@@ -26,7 +26,7 @@ Automatización con Terraform para una creación de repositorios GitHub segura y
 </div></div>
 <div class="sv-card" markdown="1"><div class="sv-card-body" markdown="1">
 <div class="sv-kicker">Next.js</div>
-### [TimeTrack](timetrack.md)
+<div class="sv-card-title" markdown="1">[TimeTrack](timetrack.md)</div>
 
 App contenerizada de registro de jornada con auth SAML y despliegue en Kubernetes.
 
@@ -34,10 +34,18 @@ App contenerizada de registro de jornada con auth SAML y despliegue en Kubernete
 </div></div>
 <div class="sv-card" markdown="1"><div class="sv-card-body" markdown="1">
 <div class="sv-kicker">JavaScript</div>
-### [Weather Dashboard](weather-dashboard.md)
+<div class="sv-card-title" markdown="1">[Weather Dashboard](weather-dashboard.md)</div>
 
 Dashboard frontend que demuestra un flujo disciplinado de CI/CD a Pages.
 
 [Ver proyecto →](weather-dashboard.md)
+</div></div>
+<div class="sv-card" markdown="1"><div class="sv-card-body" markdown="1">
+<div class="sv-kicker">Seguridad</div>
+<div class="sv-card-title" markdown="1">[Writeups](writeups/index.md)</div>
+
+Walkthroughs de laboratorios ofensivos: de recon a root.
+
+[Ver writeups →](writeups/index.md)
 </div></div>
 </div>

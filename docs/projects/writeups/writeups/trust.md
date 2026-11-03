@@ -171,7 +171,7 @@ Hola Mario,
 
 Esta web no se puede hackear.
 ```
-![alt text](../../images/writeups/Trust-secret.png)
+![alt text](../../../images/writeups/Trust-secret.png)
 
 Así que suponemos que un posible usuario es **Mario**.
 Sin más info, el siguiente paso es fuerza bruta a SSH con *hydra*:

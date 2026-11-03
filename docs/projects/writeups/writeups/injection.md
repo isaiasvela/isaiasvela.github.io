@@ -105,7 +105,7 @@ ff02::2 ip6-allrouters
 
 Una vez configurado el fichero */etc/hosts*, accedemos a la web y vemos que es un formulario de login.
 
-![Web](../../images/writeups/injection-login.png)
+![Web](../../../images/writeups/injection-login.png)
 
 Probamos a meter los parámetros básicos para comprobar si hay SQL injection. Para ello metemos la cadena *admin' OR '1' = '1'; --* en el usuario y cualquier cosa en la contraseña (en mi caso puse *hacked!*) para poder enviar el formulario. Si todo va bien, entraremos como administrador (si no funciona con admin se puede probar con root, administrator y similares, pero sin perder mucho tiempo).
 

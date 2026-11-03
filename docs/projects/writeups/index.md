@@ -26,7 +26,7 @@ Walkthroughs de laboratorios ofensivos desde la práctica hands-on: máquinas vu
 <div class="sv-grid" markdown="1">
 <div class="sv-card" markdown="1" data-difficulty="super easy" data-concepts="nmap ftp searchsploit vsftpd"><div class="sv-card-body" markdown="1">
 <div class="sv-date sv-date--supereasy">Super easy</div>
-### [First Hacking](writeups/first-hacking.md)
+<div class="sv-card-title" markdown="1">[First Hacking](writeups/first-hacking.md)</div>
 
 Primer foothold: desplegar el laboratorio y conseguir el acceso inicial.
 
@@ -34,7 +34,7 @@ Primer foothold: desplegar el laboratorio y conseguir el acceso inicial.
 </div></div>
 <div class="sv-card" markdown="1" data-difficulty="super easy" data-concepts="sqli nmap ssh privilege escalation setuid env"><div class="sv-card-body" markdown="1">
 <div class="sv-date sv-date--supereasy">Super easy</div>
-### [Injection](writeups/injection.md)
+<div class="sv-card-title" markdown="1">[Injection](writeups/injection.md)</div>
 
 Explotar un fallo de inyección para salir y escalar.
 
@@ -42,7 +42,7 @@ Explotar un fallo de inyección para salir y escalar.
 </div></div>
 <div class="sv-card" markdown="1" data-difficulty="super easy" data-concepts="gobuster hydra ssh privilege escalation vim sudo"><div class="sv-card-body" markdown="1">
 <div class="sv-date sv-date--supereasy">Super easy</div>
-### [Trust](writeups/trust.md)
+<div class="sv-card-title" markdown="1">[Trust](writeups/trust.md)</div>
 
 Un laboratorio ofensivo sobre confianza mal puesta y misconfigurations.
 
@@ -50,14 +50,14 @@ Un laboratorio ofensivo sobre confianza mal puesta y misconfigurations.
 </div></div>
 <div class="sv-card" markdown="1" data-difficulty="super easy" data-concepts="ftp hydra nmap ssh privilege escalation vim sudo"><div class="sv-card-body" markdown="1">
 <div class="sv-date sv-date--supereasy">Super easy</div>
-### [Obsession](writeups/obsession.md)
+<div class="sv-card-title" markdown="1">[Obsession](writeups/obsession.md)</div>
 
 FTP anonymous, fuerza bruta SSH y escalada con vim.
 
 [Ver writeup →](writeups/obsession.md)</div></div>
 <div class="sv-card" markdown="1" data-difficulty="super easy" data-concepts="nmap ssh privilege escalation setuid banner"><div class="sv-card-body" markdown="1">
 <div class="sv-date sv-date--supereasy">Super easy</div>
-### [Acme](writeups/acme.md)
+<div class="sv-card-title" markdown="1">[Acme](writeups/acme.md)</div>
 
 De recon a root: banner SSH mal configurado y escalada con setuid.
 

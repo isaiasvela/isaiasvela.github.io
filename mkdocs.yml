@@ -20,6 +20,7 @@ theme:
     - navigation.expand
     - navigation.top
     - navigation.instant
+    - toc.integrate
     - search.suggest
     - search.highlight
     - content.code.copy
@@ -66,7 +67,7 @@ nav:
   - Proyectos:
       - Vista general: projects/index.md
       - Seguridad:
-          - Writeups: writeups/index.md
+          - Writeups: projects/writeups/index.md
           - Kubernetes Security Lab: projects/kubernetes-security-lab.md
           - GitHub Bootstrap: projects/github-bootstrap.md
           - TimeTrack: projects/timetrack.md

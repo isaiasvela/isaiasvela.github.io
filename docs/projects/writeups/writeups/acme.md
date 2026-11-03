@@ -137,7 +137,7 @@ Así vemos que tenemos el puerto SSH abierto con la versión `OpenSSH 8.9p1 Ubun
 
 Dado que tenemos una web expuesta en el puerto _80_, accedemos mediante firefox para ver si tiene alguna vulnerabilidad o nos aporta información relevante.
 
-![Web Acme](../../images/writeups/acme-web.png)
+![Web Acme](../../../images/writeups/acme-web.png)
 
 Como podemos ver es un portal web corporativo que está en mantenimiento y que nos indica que para poder acceder a las consolas de gestión a través de SSH (que como ya habíamos visto antes está abierto). Además nos añaden unas pequeñas instrucciones de como conectarnos, y que el _Baner SSH_ nos dará mas instrucciones.
 

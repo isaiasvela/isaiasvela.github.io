@@ -52,6 +52,10 @@ markdown_extensions:
   - footnotes
   - toc:
       permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: false
+      pygments_lang_class: true
+  - pymdownx.superfences
 
 extra:
   generator: false

@@ -94,6 +94,16 @@ FTP anonymous, fuerza bruta SSH y escalada con vim.
 
 <div class="sv-grid" markdown="1">
 <div class="sv-card" markdown="1">
+[![Primeros días aprendiendo Neo4J y Cypher](images/blog/thumbnails/Neo4jyCypher.jpg)](blog/posts/neo4j-y-cypher.md)<div class="sv-card-body" markdown="1">
+<div class="sv-date">6 de noviembre de 2026</div>
+<div class="sv-card-title" markdown="1">Primeros días aprendiendo Neo4J y Cypher</div>
+
+Lo que aprendí sobre Neo4j y Cypher en una semana: bases de grafos, consultas y un adelanto de mi grafo de CVEs.
+
+[Leer más →](blog/posts/neo4j-y-cypher.md)
+</div>
+</div>
+<div class="sv-card" markdown="1">
 [![Bootstrap de repositorios GitHub con Terraform](images/blog/thumbnails/GithubBootstrap2.png)](blog/posts/github-repository-bootstrap-part2.md)<div class="sv-card-body" markdown="1">
 <div class="sv-date">30 de septiembre de 2026</div>
 <div class="sv-card-title" markdown="1">Bootstrap de repositorios GitHub, parte 2: de demo a dependable</div>
@@ -101,16 +111,6 @@ FTP anonymous, fuerza bruta SSH y escalada con vim.
 De demo funcional a herramienta dependable: inputs fail-fast, guardrails de destroy y un workflow a juego.
 
 [Leer más →](blog/posts/github-repository-bootstrap-part2.md)
-</div>
-</div>
-<div class="sv-card" markdown="1">
-[![Bootstrap de repositorios GitHub con Terraform](images/blog/thumbnails/GithubBootstrap.png)](blog/posts/github-repository-bootstrap.md)<div class="sv-card-body" markdown="1">
-<div class="sv-date">24 de agosto de 2026</div>
-<div class="sv-card-title" markdown="1">Bootstrap de repositorios GitHub con Terraform</div>
-
-Guía práctica para automatizar la creación de repositorios GitHub seguros con Terraform y defaults reutilizables.
-
-[Leer más →](blog/posts/github-repository-bootstrap.md)
 </div>
 </div>
 </div>

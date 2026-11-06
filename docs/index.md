@@ -63,6 +63,14 @@ Automatización reutilizable para crear repositorios seguros y flujos de trabajo
 
 [Ver proyecto →](projects/github-bootstrap.md)
 </div></div>
+<div class="sv-card" markdown="1"><div class="sv-card-body" markdown="1">
+<div class="sv-kicker">Neo4j</div>
+<div class="sv-card-title" markdown="1">[Vulnerability Knowledge Graph](projects/vulnerability-knowledge-graph.md)</div>
+
+Grafo de CVEs reales sobre Neo4j para explorar relaciones entre vulnerabilidades, productos y vendors.
+
+[Ver proyecto →](projects/vulnerability-knowledge-graph.md)
+</div></div>
 </div>
 
 [Ver todos →](projects/index.md)

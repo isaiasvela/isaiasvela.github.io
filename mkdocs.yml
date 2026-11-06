@@ -76,5 +76,6 @@ nav:
           - GitHub Bootstrap: projects/github-bootstrap.md
           - TimeTrack: projects/timetrack.md
           - Weather Dashboard: projects/weather-dashboard.md
+      - Vulnerability Knowledge Graph: projects/vulnerability-knowledge-graph.md
   - Blog: blog/index.md
   - Tags: tags.md

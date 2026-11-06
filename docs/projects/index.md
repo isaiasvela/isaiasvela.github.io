@@ -41,6 +41,14 @@ Dashboard frontend que demuestra un flujo disciplinado de CI/CD a Pages.
 [Ver proyecto →](weather-dashboard.md)
 </div></div>
 <div class="sv-card" markdown="1"><div class="sv-card-body" markdown="1">
+<div class="sv-kicker">Neo4j</div>
+<div class="sv-card-title" markdown="1">[Vulnerability Knowledge Graph](vulnerability-knowledge-graph.md)</div>
+
+Grafo de CVEs reales sobre Neo4j para explorar relaciones entre vulnerabilidades, productos y vendors.
+
+[Ver proyecto →](vulnerability-knowledge-graph.md)
+</div></div>
+<div class="sv-card" markdown="1"><div class="sv-card-body" markdown="1">
 <div class="sv-kicker">Seguridad</div>
 <div class="sv-card-title" markdown="1">[Writeups](writeups/index.md)</div>
 
